@@ -1,0 +1,11 @@
+<div>
+	<h2>My Heroes</h2>
+  <ul class="heroes">
+    <li *ng-for="#hero of heroes" (click)="onSelect(hero)">
+      ({{hero.id}}) {{hero.name}}
+    </li>
+  </ul>
+  <div *ng-if="currentHero">
+    <hero-detail [hero]="currentHero"></hero-detail>
+  </div>
+</div>
