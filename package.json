@@ -1,5 +1,6 @@
 {
   "name": "ng2In20",
+  "version": "0.0.1",
   "scripts": {
     "postinstall": "cd src && tsd reinstall -r -o && cd ..",
     "tsc": "tsc -p src -w",
