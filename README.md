@@ -6,16 +6,16 @@
 	npm install -g tsd typescript live-server
 	```
 
-1. Create empty `package.json`, and hit enter to all of the prompts
+1. Create empty `package.json`
 
 	```bash
-	npm init
+	npm init -y
 	```
 
 1. Install npm packages
 
 	```bash
-	npm install --save angular2@2.0.0-alpha.35 es6-module-loader@0.16 systemjs@0.16 traceur
+	npm install --save angular2 systemjs traceur
 	```
 
 1. Make a source folder
@@ -56,7 +56,7 @@
 		selector: 'app'
 	})
 	@View({
-		template: 'hello heroes'
+		template: '<h1>My First Angular 2 App</h1>'
 	})
 	export class AppComponent { }
 
