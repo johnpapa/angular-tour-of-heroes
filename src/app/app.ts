@@ -1,6 +1,6 @@
 import {bootstrap, Component, View} from 'angular2/angular2';
-import {HeroDataservice} from 'hero.dataservice';
-import {HeroesComponent} from 'heroes.component';
+import {HeroDataservice} from './hero-dataservice';
+import {HeroesComponent} from './heroes-component';
 
 @Component({
   selector: 'app',

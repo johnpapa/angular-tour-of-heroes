@@ -1,15 +1,15 @@
 import {Component, NgFor, NgIf, View} from 'angular2/angular2';
-import {HeroDetailComponent} from 'hero.detail.component';
-import {HeroDataservice} from 'hero.dataservice';
-import {Hero} from 'heroes';
+import {HeroDetailComponent} from './hero-detail-component';
+import {HeroDataservice} from './hero-dataservice';
+import {Hero} from './heroes';
 
 @Component({
   selector: 'heroes'
 })
 @View({
-  templateUrl: 'heroes.component.html',
+  templateUrl: 'app/heroes-component.html',
   directives: [HeroDetailComponent, NgFor, NgIf],
-  styleUrls: ['heroes.component.css']
+  styleUrls: ['app/heroes-component.css']
 })
 export class HeroesComponent {
   private _heroes: Hero[];
