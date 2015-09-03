@@ -1,6 +1,6 @@
 import {HEROES, Hero} from './heroes';
 
-export class HeroDataservice {
+export class HeroService {
 	private _heroes: Hero[];
 
 	get heroes() {

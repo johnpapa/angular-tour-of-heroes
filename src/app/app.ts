@@ -1,10 +1,10 @@
 import {bootstrap, Component, View} from 'angular2/angular2';
-import {HeroDataservice} from './hero-dataservice';
+import {HeroService} from './hero-service';
 import {HeroesComponent} from './heroes-component';
 
 @Component({
   selector: 'app',
-  bindings: [HeroDataservice]
+  bindings: [HeroService]
 })
 @View({
   template: '<heroes></heroes>',

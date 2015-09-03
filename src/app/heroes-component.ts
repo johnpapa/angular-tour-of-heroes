@@ -1,6 +1,6 @@
 import {Component, NgFor, NgIf, View} from 'angular2/angular2';
 import {HeroDetailComponent} from './hero-detail-component';
-import {HeroDataservice} from './hero-dataservice';
+import {HeroService} from './hero-service';
 import {Hero} from './heroes';
 
 @Component({
@@ -14,7 +14,7 @@ import {Hero} from './heroes';
 export class HeroesComponent {
   private _heroes: Hero[];
 
-  constructor(private _heroDataService: HeroDataservice) { }
+  constructor(private _heroService: HeroService) { }
 
   currentHero: Hero;
 
@@ -30,7 +30,7 @@ export class HeroesComponent {
   /////////////
 
   private _getAllHeroes() {
-    this._heroDataService.getAllHeroes().then(heroes => {
+    this._heroService.getAllHeroes().then(heroes => {
       this._heroes = heroes;
       this.currentHero = heroes[0];
     });
