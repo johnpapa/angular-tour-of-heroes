@@ -1,1 +1,2 @@
 .heroes {list-style-type: none; margin-left: 1em; padding: 0}
+.heroes > li { cursor: pointer }
