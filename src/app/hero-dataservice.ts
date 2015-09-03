@@ -1,4 +1,4 @@
-import {HEROES, Hero} from 'heroes';
+import {HEROES, Hero} from './heroes';
 
 export class HeroDataservice {
 	private _heroes: Hero[];
