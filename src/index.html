@@ -11,13 +11,7 @@
   <app></app>
   <script>
     System.config({
-      packages: {
-        'app': {
-          // main: 'app', // System.import("app") -> /baseUrl/app/app.js
-          // overrides the defaultJSExtensions compatibility mode
-          defaultExtension: 'js'
-        }
-      }
+      packages: {'app': {defaultExtension: 'js'}}
     });
     System.import('app/app');
   </script>
