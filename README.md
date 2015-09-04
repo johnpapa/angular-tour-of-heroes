@@ -21,14 +21,13 @@
 1. Make a source folder
 
 	```bash
-	mkdir src
-	cd src
+	mkdir -p src/app
 	```
 
 1. Install typings files
 
 	```bash
-	tsd install angular2 -r -o -s -a
+	tsd install angular2 -rosa --config src/tsd.json
 	```
 
 1. Create a `tsconfig.json` file, in an editor
