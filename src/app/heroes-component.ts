@@ -4,7 +4,7 @@ import {HeroService} from './hero-service';
 import {Hero} from './heroes';
 
 @Component({
-  selector: 'heroes',
+  selector: 'my-heroes',
   bindings: [HeroService]
 })
 @View({
