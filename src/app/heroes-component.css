@@ -4,10 +4,7 @@
 .heroes li { transition: all .15s ease-in-out; }
 .heroes li:hover { transform: scale(1.01); color: #369; }
 
-.container {
-  margin: 2em;
-  color: #888;
-  font-family: Cambria, Georgia;
-}
+.container { margin: 2em; }
+.container, input[text] { color: #888; font-family: Cambria, Georgia; }
 
-h1, h2 { color: #444; font-weight: lighter; }
+h2 { color: #444; font-weight: lighter; }
