@@ -4,9 +4,9 @@ h2 { color: #444; font-weight: lighter; }
 .container, input[text] { color: #888; font-family: Cambria, Georgia; }
 .heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 10em;}
 
-.heroes li { cursor: pointer; position: relative; transition: all 0.2s ease; }
+.heroes li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }
 
-.heroes li:hover {color: #369; background-color: #EEE; left: .1em;}
+.heroes li:hover {color: #369; background-color: #EEE; left: .2em;}
 
 .heroes .badge {
 	font-size: small;
