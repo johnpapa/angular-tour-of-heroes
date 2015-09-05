@@ -2,61 +2,61 @@ import { Hero } from './hero';
 
 export var HEROES: Hero[] = [
 	{
-		"id": 1,
+		"id": 11,
 		"name": "Mr. Nice",
 		"alterEgo": "Walter Meek",
 		"power": "Empathy"
 	},
 	{
-		"id": 2,
+		"id": 12,
 		"name": "Narco",
 		"alterEgo": "Nancy Knight",
 		"power": "Drowsiness"
 	},
 	{
-		"id": 3,
+		"id": 13,
 		"name": "Bombasto",
 		"alterEgo": "Bob LaRue",
 		"power": "Hypersound"
 	},
 	{
-		"id": 4,
+		"id": 14,
 		"name": "Celeritas",
 		"alterEgo": "Larry Plodder",
 		"power": "Super speed"
 	},
 	{
-		"id": 5,
+		"id": 15,
 		"name": "Magneta",
 		"alterEgo": "Julie Ohm",
 		"power": "Master of electro-magnetic fields"
 	},
 	{
-		"id": 6,
+		"id": 16,
 		"name": "RubberMan",
 		"alterEgo": "Jimmy Longfellow",
 		"power": "Super flexible"
 	},
 	{
-		"id": 7,
+		"id": 17,
 		"name": "Dynama",
 		"alterEgo": "Shirley Knots",
 		"power": "Incredible strength"
 	},
 	{
-		"id": 8,
+		"id": 18,
 		"name": "Dr IQ",
 		"alterEgo": "Chuck Overstreet",
 		"power": "Really smart"
 	},
 	{
-		"id": 9,
+		"id": 19,
 		"name": "Magma",
 		"alterEgo": "Harvey Klue",
 		"power": "Super hot"
 	},
 	{
-		"id": 10,
+		"id": 20,
 		"name": "Tornado",
 		"alterEgo": "Ted Baxter",
 		"power": "Weather changer"
