@@ -2,22 +2,16 @@ h2 { color: #444; font-weight: lighter; }
 
 .container { margin: 2em; }
 .container, input[text] { color: #888; font-family: Cambria, Georgia; }
-.heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 16em}
+.heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 10em;}
 
-.heroes li {
-	cursor: pointer;
-	margin: .2em;
-	border: 1px solid #369;
-	position: relative;
-  transition: all 0.2s ease;
-}
+.heroes li { cursor: pointer; position: relative; transition: all 0.2s ease; }
 
 .heroes li:hover {color: #369; background-color: #EEE; left: .1em;}
 
 .heroes .badge {
 	font-size: small;
 	color: white;
-	padding: 0.2em 0.7em;
+	padding: 0.1em 0.7em;
 	background-color: #369;
 	line-height: 1em;
 	position: relative;
