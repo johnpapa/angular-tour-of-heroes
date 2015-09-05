@@ -1,5 +1,5 @@
-<div>
-	<h2>My Heroes</h2>
+<div class="container">
+  <h2>My Heroes</h2>
   <ul class="heroes">
     <li *ng-for="#hero of heroes" (click)="onSelect(hero)">
       ({{hero.id}}) {{hero.name}}
