@@ -1,8 +1,8 @@
 .heroes {list-style-type: none; margin-left: 1em; padding: 0;}
 .heroes > li {cursor: pointer;}
 
-.animated li { transition: all .15s ease-in-out; }
-.animated li:hover { transform: scale(1.01); color: #369; }
+.heroes li { transition: all .15s ease-in-out; }
+.heroes li:hover { transform: scale(1.01); color: #369; }
 
 .container {
   margin: 2em;
