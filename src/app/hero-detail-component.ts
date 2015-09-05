@@ -6,6 +6,7 @@ import {Hero} from './hero';
 })
 @View({
   templateUrl: 'app/hero-detail-component.html',
+  styles: ['h1, h2 { color: #444; font-weight: lighter; }'],
   directives: [FORM_DIRECTIVES]
 })
 export class HeroDetailComponent {

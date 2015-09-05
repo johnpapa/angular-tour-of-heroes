@@ -1,3 +1,13 @@
-.container {margin: 2em; font-family: Cambria, Georgia}
-.heroes {list-style-type: none; margin-left: 1em; padding: 0}
-.heroes > li { cursor: pointer }
+.heroes {list-style-type: none; margin-left: 1em; padding: 0;}
+.heroes > li {cursor: pointer;}
+
+.animated li { transition: all .15s ease-in-out; }
+.animated li:hover { transform: scale(1.01); color: #369; }
+
+.container {
+  margin: 2em;
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+
+h1, h2 { color: #444; font-weight: lighter; }
