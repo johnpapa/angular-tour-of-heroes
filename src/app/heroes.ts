@@ -3,62 +3,42 @@ import { Hero } from './hero';
 export var HEROES: Hero[] = [
 	{
 		"id": 11,
-		"name": "Mr. Nice",
-		"alterEgo": "Walter Meek",
-		"power": "Empathy"
+		"name": "Mr. Nice"
 	},
 	{
 		"id": 12,
-		"name": "Narco",
-		"alterEgo": "Nancy Knight",
-		"power": "Drowsiness"
+		"name": "Narco"
 	},
 	{
 		"id": 13,
-		"name": "Bombasto",
-		"alterEgo": "Bob LaRue",
-		"power": "Hypersound"
+		"name": "Bombasto"
 	},
 	{
 		"id": 14,
-		"name": "Celeritas",
-		"alterEgo": "Larry Plodder",
-		"power": "Super speed"
+		"name": "Celeritas"
 	},
 	{
 		"id": 15,
-		"name": "Magneta",
-		"alterEgo": "Julie Ohm",
-		"power": "Master of electro-magnetic fields"
+		"name": "Magneta"
 	},
 	{
 		"id": 16,
-		"name": "RubberMan",
-		"alterEgo": "Jimmy Longfellow",
-		"power": "Super flexible"
+		"name": "RubberMan"
 	},
 	{
 		"id": 17,
-		"name": "Dynama",
-		"alterEgo": "Shirley Knots",
-		"power": "Incredible strength"
+		"name": "Dynama"
 	},
 	{
 		"id": 18,
-		"name": "Dr IQ",
-		"alterEgo": "Chuck Overstreet",
-		"power": "Really smart"
+		"name": "Dr IQ"
 	},
 	{
 		"id": 19,
-		"name": "Magma",
-		"alterEgo": "Harvey Klue",
-		"power": "Super hot"
+		"name": "Magma"
 	},
 	{
 		"id": 20,
-		"name": "Tornado",
-		"alterEgo": "Ted Baxter",
-		"power": "Weather changer"
+		"name": "Tornado"
 	}
 ];
