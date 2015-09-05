@@ -20,20 +20,16 @@ export class HeroesComponent {
   currentHero: Hero;
 
   get heroes() {
-    if (!this._heroes) { this._getAllHeroes(); }
+    if (this._heroes) { return this._heroes; }
+
+    this._heroService.getAllHeroes().then(heroes => {
+      this._heroes = heroes;
+      this.currentHero = heroes[0];
+    });
     return this._heroes;
   }
 
   onSelect(hero: Hero) {
     this.currentHero = hero;
-  }
-
-  /////////////
-
-  private _getAllHeroes() {
-    this._heroService.getAllHeroes().then(heroes => {
-      this._heroes = heroes;
-      this.currentHero = heroes[0];
-    });
   }
 }
