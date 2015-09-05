@@ -1,11 +1,26 @@
-.heroes {list-style-type: none; margin-left: 1em; padding: 0;}
-
-.heroes li { cursor: pointer; margin: 0.3em 0; transition: all .15s ease-in-out; }
-.heroes li:hover { transform: scale(1.01); color: #369; }
-
-.heroes .badge { border-radius: 4px; background-color: #369; font-size: small; color: white; padding: .2em; margin: 1em 0; }
+h2 { color: #444; font-weight: lighter; }
 
 .container { margin: 2em; }
 .container, input[text] { color: #888; font-family: Cambria, Georgia; }
+.heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 16em}
 
-h2 { color: #444; font-weight: lighter; }
+.heroes li {
+	cursor: pointer;
+	margin: .2em;
+	border: 1px solid #369;
+	position: relative;
+  transition: all 0.2s ease;
+}
+
+.heroes li:hover {color: #369; background-color: #EEE; left: .1em;}
+
+.heroes .badge {
+	font-size: small;
+	color: white;
+	padding: 0.2em 0.7em;
+	background-color: #369;
+	line-height: 1em;
+	position: relative;
+	left: -1px;
+	top: -1px;
+}
