@@ -1,7 +1,7 @@
 import {Component, NgFor, NgIf, View} from 'angular2/angular2';
 import {HeroDetailComponent} from './hero-detail-component';
 import {HeroService} from './hero-service';
-import {Hero} from './heroes';
+import {Hero} from './hero';
 
 @Component({
   selector: 'my-heroes',

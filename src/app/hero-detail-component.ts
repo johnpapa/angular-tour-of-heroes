@@ -1,5 +1,5 @@
 import {Component, FORM_DIRECTIVES, View} from 'angular2/angular2';
-import {Hero} from './heroes';
+import {Hero} from './hero';
 
 @Component({
   selector: 'my-hero-detail', properties: ['hero']

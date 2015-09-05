@@ -1,4 +1,4 @@
-import {HEROES, Hero} from './heroes';
+import {HEROES} from './heroes';
 
 export class HeroService {
 	getAllHeroes() {

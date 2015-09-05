@@ -1,43 +1,64 @@
-export interface Hero {
-	id: number;
-	name: string;
-}
+import { Hero } from './hero';
 
 export var HEROES: Hero[] = [
 	{
 		"id": 1,
-		"name": "Misko"
+		"name": "Mr. Nice",
+		"alterEgo": "Walter Meek",
+		"power": "Empathy"
 	},
 	{
 		"id": 2,
-		"name": "Naomi"
+		"name": "Narco",
+		"alterEgo": "Nancy Knight",
+		"power": "Drowsiness"
 	},
 	{
 		"id": 3,
-		"name": "Brad"
+		"name": "Bombasto",
+		"alterEgo": "Bob LaRue",
+		"power": "Hypersound"
 	},
 	{
 		"id": 4,
-		"name": "Jeff"
+		"name": "Celeritas",
+		"alterEgo": "Larry Plodder",
+		"power": "Super speed"
 	},
 	{
 		"id": 5,
-		"name": "Julie"
+		"name": "Magneta",
+		"alterEgo": "Julie Ohm",
+		"power": "Master of electro-magnetic fields"
 	},
 	{
 		"id": 6,
-		"name": "Brian"
+		"name": "RubberMan",
+		"alterEgo": "Jimmy Longfellow",
+		"power": "Super flexible"
 	},
 	{
 		"id": 7,
-		"name": "Jeff"
+		"name": "Dynama",
+		"alterEgo": "Shirley Knots",
+		"power": "Incredible strength"
 	},
 	{
 		"id": 8,
-		"name": "Kathy"
+		"name": "Dr IQ",
+		"alterEgo": "Chuck Overstreet",
+		"power": "Really smart"
 	},
 	{
 		"id": 9,
-		"name": "Igor"
+		"name": "Magma",
+		"alterEgo": "Harvey Klue",
+		"power": "Super hot"
+	},
+	{
+		"id": 10,
+		"name": "Tornado",
+		"alterEgo": "Ted Baxter",
+		"power": "Weather changer"
 	}
 ];
