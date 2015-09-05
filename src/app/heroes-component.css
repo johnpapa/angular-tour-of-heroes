@@ -1,2 +1,3 @@
+.container {margin: 2em; font-family: Cambria, Georgia}
 .heroes {list-style-type: none; margin-left: 1em; padding: 0}
 .heroes > li { cursor: pointer }
