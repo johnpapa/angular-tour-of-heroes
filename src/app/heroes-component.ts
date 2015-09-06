@@ -24,12 +24,15 @@ export class HeroesComponent {
 
     this._heroService.getAllHeroes().then(heroes => {
       this._heroes = heroes;
-      this.currentHero = heroes[0];
     });
     return this._heroes;
   }
 
   onSelect(hero: Hero) {
     this.currentHero = hero;
+  }
+
+  selection(hero: Hero) {
+    return hero === this.currentHero ? 'selected-item' : '';
   }
 }
