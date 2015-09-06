@@ -31,4 +31,8 @@ export class HeroesComponent {
   onSelect(hero: Hero) {
     this.currentHero = hero;
   }
+
+  selection(hero: Hero) {
+    return hero === this.currentHero ? 'selected-item' : '';
+  }
 }
