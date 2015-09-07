@@ -18,4 +18,4 @@ h2 { color: #444; font-weight: lighter; }
 	left: -1px;
 	top: -1px;
 }
-.selected-item { background-color: #EEE; color: #369; }
+.selected { background-color: #EEE; color: #369; }
