@@ -1,13 +1,14 @@
-<div class="container">
+<div>
   <h2>My Heroes</h2>
   <ul class="heroes">
     <li *ng-for="#hero of heroes"
-      (click)="onSelect(hero)"
-      [ng-class]="getSelectedClass(hero)">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
+      [ng-class]="getSelectedClass(hero)"
+      (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}</a>
     </li>
   </ul>
   <div *ng-if="currentHero">
-    <my-hero-detail [hero]="currentHero"></my-hero-detail>
+    <h2>{{currentHero.name}} is my hero</h2>
+		<button (click)="goDetail()">View Details</button>
   </div>
 </div>
