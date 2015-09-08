@@ -8,8 +8,6 @@ import {HeroService} from './hero-service';
 })
 @View({
   templateUrl: 'app/hero-detail-component.html',
-  styles: [`h2 { color: #444; font-weight: lighter; }
-            input, button{font-family:inherit;} `],
   directives: [FORM_DIRECTIVES]
 })
 export class HeroDetailComponent {
