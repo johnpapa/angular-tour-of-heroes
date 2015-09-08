@@ -1,25 +1,22 @@
 import {Component, NgClass, NgFor, NgIf, View} from 'angular2/angular2';
-import {HeroDetailComponent} from './hero-detail-component';
 import {HeroService} from './hero-service';
 import {Hero} from './hero';
-import {RouterLink} from 'angular2/router';
+import {Router} from 'angular2/router';
 import {ROUTES} from './config';
 
 @Component({
   selector: 'my-heroes'
-  // bindings: [HeroService] // dont need cuz i put in bootstrap for now
 })
 @View({
   templateUrl: 'app/heroes-component.html',
-  directives: [HeroDetailComponent, NgClass, NgFor, NgIf, RouterLink],
+  directives: [NgClass, NgFor, NgIf],
   styleUrls: ['app/heroes-component.css']
 })
 export class HeroesComponent {
-  private ROUTE_DETAIL: string = '/detail';
   private _heroes: Hero[];
   currentHero: Hero;
 
-  constructor(private _heroService: HeroService) { }
+  constructor(private _heroService: HeroService, private _router: Router) { }
 
   get heroes() {
     if (this._heroes) { return this._heroes; }
@@ -36,7 +33,7 @@ export class HeroesComponent {
     return { 'selected': hero === this.currentHero };
   }
 
-  getDetailLink() {
-    return [ROUTES.detail, { id: this.currentHero.id }];
+  goDetail() {
+    this._router.navigate(`${ROUTES.detail}/${this.currentHero.id}`);
   }
 }
