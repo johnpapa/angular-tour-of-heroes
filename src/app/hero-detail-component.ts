@@ -19,10 +19,10 @@ export class HeroDetailComponent {
   showDetail = false;
 
   constructor(private _heroService: HeroService, private _routeParams: RouteParams) {
-    let paramId = _routeParams.get('id');
+    let paramId = _routeParams.params && _routeParams.get('id');
     this.showDetail = !!paramId;
     if (paramId) {
-      this.id = +(_routeParams.get('id'));
+      this.id = +(paramId);
       this._heroService.getHero(this.id).then((hero) => {
         this.hero = hero[0];
       });
