@@ -1,9 +1,7 @@
 import {HEROES} from './heroes';
 
 export class HeroService {
-	getAllHeroes() {
-		return Promise.resolve(HEROES);
-	}
+	getAllHeroes() { return Promise.resolve(HEROES); }
 
 	getHero(id: number) {
 		return Promise.resolve(HEROES)

@@ -3,9 +3,7 @@ import {RouteParams} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero-service';
 
-@Component({
-  selector: 'my-hero-detail'
-})
+@Component({selector: 'my-hero-detail'})
 @View({
   templateUrl: 'app/hero-detail-component.html',
   directives: [FORM_DIRECTIVES]
