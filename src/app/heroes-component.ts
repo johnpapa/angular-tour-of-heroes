@@ -14,10 +14,9 @@ import {Hero} from './hero';
 })
 export class HeroesComponent {
   private _heroes: Hero[];
+  currentHero: Hero;
 
   constructor(private _heroService: HeroService) { }
-
-  currentHero: Hero;
 
   get heroes() {
     if (this._heroes) { return this._heroes; }
@@ -28,9 +27,7 @@ export class HeroesComponent {
     return this._heroes;
   }
 
-  onSelect(hero: Hero) {
-    this.currentHero = hero;
-  }
+  onSelect(hero: Hero) { this.currentHero = hero; }
 
   getSelectedClass(hero: Hero) {
     return { 'selected': hero === this.currentHero };
