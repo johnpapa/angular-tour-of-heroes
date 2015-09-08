@@ -1,4 +1,4 @@
-import {Component, NgFor, NgIf, View} from 'angular2/angular2';
+import {Component, NgClass, NgFor, NgIf, View} from 'angular2/angular2';
 import {HeroDetailComponent} from './hero-detail-component';
 import {HeroService} from './hero-service';
 import {Hero} from './hero';
@@ -9,15 +9,14 @@ import {Hero} from './hero';
 })
 @View({
   templateUrl: 'app/heroes-component.html',
-  directives: [HeroDetailComponent, NgFor, NgIf],
+  directives: [HeroDetailComponent, NgClass, NgFor, NgIf],
   styleUrls: ['app/heroes-component.css']
 })
 export class HeroesComponent {
   private _heroes: Hero[];
+  currentHero: Hero;
 
   constructor(private _heroService: HeroService) { }
-
-  currentHero: Hero;
 
   get heroes() {
     if (this._heroes) { return this._heroes; }
@@ -28,11 +27,9 @@ export class HeroesComponent {
     return this._heroes;
   }
 
-  onSelect(hero: Hero) {
-    this.currentHero = hero;
-  }
+  onSelect(hero: Hero) { this.currentHero = hero; }
 
-  selection(hero: Hero) {
-    return hero === this.currentHero ? 'selected-item' : '';
+  getSelectedClass(hero: Hero) {
+    return { 'selected': hero === this.currentHero };
   }
 }
