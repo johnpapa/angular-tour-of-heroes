@@ -14,7 +14,7 @@ import {ROUTES} from './config';
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  // { path: '/', redirectTo: ROUTES.heroes }, //TODO: Need an otherwise instead
+  { path: '/', redirectTo: ROUTES.heroes }, //TODO: Need an otherwise instead
   { path: ROUTES.about, as: 'about', component: AboutComponent },
   { path: ROUTES.heroes, as: 'heroes', component: HeroesComponent },
   { path: ROUTES.detail + '/:id', as: 'detail', component: HeroDetailComponent }
