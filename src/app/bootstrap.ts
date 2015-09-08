@@ -33,6 +33,7 @@ export class AppComponent {
 }
 
 bootstrap(AppComponent, [
-		ROUTER_DIRECTIVES, ROUTER_BINDINGS,
+	ROUTER_DIRECTIVES,
+	ROUTER_BINDINGS,
 	bind(LocationStrategy).toClass(HashLocationStrategy)
 ]);
