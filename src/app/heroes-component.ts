@@ -1,7 +1,7 @@
 import {Component, NgClass, NgFor, NgIf, View} from 'angular2/angular2';
+import {Router} from 'angular2/router';
 import {HeroService} from './hero-service';
 import {Hero} from './hero';
-import {Router} from 'angular2/router';
 import {ROUTES} from './config';
 
 @Component({
@@ -21,9 +21,7 @@ export class HeroesComponent {
   get heroes() {
     if (this._heroes) { return this._heroes; }
 
-    this._heroService.getAllHeroes().then(heroes => {
-      this._heroes = heroes;
-    });
+    this._heroService.getAllHeroes().then(heroes => this._heroes = heroes);
     return this._heroes;
   }
 
