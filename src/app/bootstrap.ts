@@ -6,7 +6,7 @@ import {ROUTER_DIRECTIVES, ROUTER_BINDINGS} from 'angular2/router';
 import {RouteConfig, RouterOutlet, Router} from 'angular2/router';
 import {LocationStrategy, Location, HashLocationStrategy } from 'angular2/router';
 
-import { HeroDetailComponent } from './hero-detail-component';
+import {HeroDetailComponent } from './hero-detail-component';
 
 @Component({
   selector: 'my-app'
@@ -16,10 +16,10 @@ import { HeroDetailComponent } from './hero-detail-component';
   directives: [RouterOutlet]
 })
 @RouteConfig([
-  { path: '/', redirectTo: '/heroes' },
-  { path: '/heroes', as: 'heroes', component: HeroesComponent },
-  { path: '/detail', as: 'detail', component: HeroDetailComponent }
-  // { path: '/detail/:id',    as: 'orders',     component: HeroDetailComponent    }
+  {path: '/', redirectTo: '/heroes'},
+  {path: '/heroes', as: 'heroes', component: HeroesComponent},
+  {path: '/detail', as: 'detail', component: HeroDetailComponent}
+  // {path: '/detail/:id', as: 'orders', component: HeroDetailComponent}
 ])
 export class AppComponent {
   constructor(private router: Router, private location: Location) {
