@@ -1,5 +1,7 @@
 import {bootstrap} from 'angular2/angular2';
 import {HeroesComponent} from './heroes-component';
+import { HeroService } from './hero-service';
+import {ROUTES} from './config';
 
 import {bind, View, Component} from 'angular2/angular2';
 
@@ -9,9 +11,8 @@ import {bind, View, Component} from 'angular2/angular2';
         deps: CONST_EXPR([RouteRegistry, Pipeline, Location, APP_COMPONENT])
       }))]);
 */
-import {ROUTER_DIRECTIVES, ROUTER_BINDINGS} from 'angular2/router';
-import {RouteConfig, Router} from 'angular2/router';
-import {LocationStrategy, Location, HashLocationStrategy,PathLocationStrategy } from 'angular2/router';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_BINDINGS} from 'angular2/router'; // Router
+import {LocationStrategy, HashLocationStrategy, PathLocationStrategy } from 'angular2/router'; // Location
 
 import {HeroDetailComponent } from './hero-detail-component';
 
@@ -20,33 +21,32 @@ import {HeroDetailComponent } from './hero-detail-component';
 })
 @View({
     template: `
-  <ul>
-    <li><a [router-link]="['/heroes']">Heroes</a></li>
-    <li><a [router-link]="['/detail',{'id':11}]">Detail</a></li>
-  </ul>
-  <router-outlet></router-outlet>
+    <a [router-link]="['${ROUTES.heroes}']">Heroes</a>
+    <a [router-link]="['${ROUTES.detail}',{'id':11}]">Detail</a>
+    <router-outlet></router-outlet>
   `,
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  {path: '/', redirectTo: '/heroes'},
-  {path: '/heroes', as: 'heroes', component: HeroesComponent},
-  {path: '/detail', as: 'detail', component: HeroDetailComponent}
+  {path: '/', redirectTo: ROUTES.heroes},
+  {path: ROUTES.heroes, as: 'heroes', component: HeroesComponent},
+  {path: ROUTES.detail + '/:id', as: 'detail', component: HeroDetailComponent}
   // {path: '/detail/:id', as: 'orders', component: HeroDetailComponent}
 ])
 export class AppComponent {
-  constructor(private router: Router, private location: Location) {
-    this.router = router;
-    this.location = location;
+  // constructor(private router: Router, private location: Location) {
+  //   // this.router = router;
+  //   // this.location = location;
 
-    //Manual navigation for now
-    //let url = browserLocation.path();
-    //router.navigate(url);
-  }
+  //   //Manual navigation for now
+  //   // let url = browserLocation.path();
+  //   // router.navigate(url);
+  // }
 }
 
 bootstrap(AppComponent, [
-	ROUTER_BINDINGS,
-	// bind(LocationStrategy).toClass(HashLocationStrategy)
-	bind(LocationStrategy).toClass(PathLocationStrategy)
+  ROUTER_BINDINGS,
+  HeroService, // gives this everyone
+	bind(LocationStrategy).toClass(HashLocationStrategy)
+	// bind(LocationStrategy).toClass(PathLocationStrategy)
 ]);

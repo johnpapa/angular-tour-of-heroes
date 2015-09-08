@@ -2,6 +2,8 @@ import {Component, NgClass, NgFor, NgIf, View} from 'angular2/angular2';
 import {HeroDetailComponent} from './hero-detail-component';
 import {HeroService} from './hero-service';
 import {Hero} from './hero';
+import {RouterLink} from 'angular2/router';
+import {ROUTES} from './config';
 
 @Component({
   selector: 'my-heroes',
@@ -9,10 +11,11 @@ import {Hero} from './hero';
 })
 @View({
   templateUrl: 'app/heroes-component.html',
-  directives: [HeroDetailComponent, NgClass, NgFor, NgIf],
+  directives: [HeroDetailComponent, NgClass, NgFor, NgIf, RouterLink],
   styleUrls: ['app/heroes-component.css']
 })
 export class HeroesComponent {
+  private ROUTE_DETAIL: string = '/detail';
   private _heroes: Hero[];
   currentHero: Hero;
 
@@ -31,5 +34,9 @@ export class HeroesComponent {
 
   getSelectedClass(hero: Hero) {
     return { 'selected': hero === this.currentHero };
+  }
+
+  getLink(hero: Hero) {
+    return [ROUTES.detail, { id: hero.id }];
   }
 }
