@@ -4,9 +4,7 @@ import {HeroService} from './hero-service';
 import {Hero} from './hero';
 import {ROUTES} from './config';
 
-@Component({
-  selector: 'my-heroes'
-})
+@Component({selector: 'my-heroes'})
 @View({
   templateUrl: 'app/heroes-component.html',
   directives: [NgClass, NgFor, NgIf],
