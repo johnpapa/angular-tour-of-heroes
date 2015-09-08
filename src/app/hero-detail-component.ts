@@ -14,7 +14,7 @@ import {ROUTES} from './config';
   directives: [FORM_DIRECTIVES, NgIf, RouterLink]
 })
 export class HeroDetailComponent {
-  hero: Hero  ;
+  hero: Hero;
   id: number;
   showDetail = false;
 
