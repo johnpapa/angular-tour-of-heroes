@@ -1,7 +1,3 @@
-h2 { color: #444; font-weight: lighter; }
-
-.container { margin: 2em; }
-.container, input[text] { color: #888; font-family: Cambria, Georgia; }
 .heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 10em;}
 
 .heroes li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }
