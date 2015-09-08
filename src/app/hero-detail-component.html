@@ -1,14 +1,8 @@
 <div>
-	<div *ng-if="!showDetail">
-  	<h2>{{hero.name}} is my hero</h2>
-		<span><a [router-link]="getDetailLink(hero)">Click for {{hero.name}} details</a></span>
-	</div>
-	<div *ng-if="showDetail">
-  	<h2>View {{hero.name}} details!</h2>
-		<div><label>id: </label>{{hero.id}}</div>
-		<div>
-			<label>name: </label>
-			<input [(ng-model)]="hero.name" placeholder="name"></input>
-		</div>
+	<h2>View {{hero.name}} details!</h2>
+	<div><label>id: </label>{{hero.id}}</div>
+	<div>
+		<label>name: </label>
+		<input [(ng-model)]="hero.name" placeholder="name"></input>
 	</div>
 </div>

@@ -36,7 +36,7 @@ export class HeroesComponent {
     return { 'selected': hero === this.currentHero };
   }
 
-  getLink(hero: Hero) {
-    return [ROUTES.detail, { id: hero.id }];
+  getDetailLink() {
+    return [ROUTES.detail, { id: this.currentHero.id }];
   }
 }

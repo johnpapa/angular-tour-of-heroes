@@ -4,14 +4,11 @@
     <li *ng-for="#hero of heroes"
       [ng-class]="getSelectedClass(hero)"
       (click)="onSelect(hero)">
-
       <span class="badge">{{hero.id}}</span> {{hero.name}}</a>
     </li>
   </ul>
   <div *ng-if="currentHero">
-    <my-hero-detail [hero]="currentHero"></my-hero-detail>
+    <h2>{{currentHero.name}} is my hero</h2>
+		<span><a [router-link]="getDetailLink()">Click for {{currentHero.name}} details</a></span>
   </div>
 </div>
-
- <!--<a [router-link]="getLink(hero)">-->
-<!--(click)="onSelect(hero)"-->
