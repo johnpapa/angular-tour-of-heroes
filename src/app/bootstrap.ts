@@ -34,20 +34,11 @@ import { AboutComponent } from './about-component';
   {path: ROUTES.heroes, as: 'heroes', component: HeroesComponent},
   {path: ROUTES.detail + '/:id', as: 'detail', component: HeroDetailComponent}
 ])
-export class AppComponent {
-  // constructor(private router: Router, private location: Location) {
-  //   // this.router = router;
-  //   // this.location = location;
-
-  //   //Manual navigation for now
-  //   // let url = browserLocation.path();
-  //   // router.navigate(url);
-  // }
-}
+export class AppComponent { }
 
 bootstrap(AppComponent, [
   ROUTER_BINDINGS,
-  HeroService, // gives this everyone
+  HeroService, // gives this to everyone
 	bind(LocationStrategy).toClass(HashLocationStrategy)
 	// bind(LocationStrategy).toClass(PathLocationStrategy)
 ]);
