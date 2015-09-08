@@ -6,8 +6,8 @@ import {RouterLink} from 'angular2/router';
 import {ROUTES} from './config';
 
 @Component({
-  selector: 'my-heroes',
-  bindings: [HeroService]
+  selector: 'my-heroes'
+  // bindings: [HeroService] // dont need cuz i put in bootstrap for now
 })
 @View({
   templateUrl: 'app/heroes-component.html',

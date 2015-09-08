@@ -2,8 +2,9 @@
   <h2>My Heroes</h2>
   <ul class="heroes">
     <li *ng-for="#hero of heroes"
-      [ng-class]="getSelectedClass(hero)">
-      <a [router-link]="getLink(hero)">
+      [ng-class]="getSelectedClass(hero)"
+      (click)="onSelect(hero)">
+
       <span class="badge">{{hero.id}}</span> {{hero.name}}</a>
     </li>
   </ul>
@@ -12,4 +13,5 @@
   </div>
 </div>
 
+ <!--<a [router-link]="getLink(hero)">-->
 <!--(click)="onSelect(hero)"-->

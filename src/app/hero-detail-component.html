@@ -1,8 +1,13 @@
 <div>
-	<h2>{{hero.name}} is my current hero!</h2>
-	<div><label>id: </label>{{hero.id}}</div>
-	<div>
-		<label>name: </label>
-		<input [(ng-model)]="hero.name" placeholder="name"></input>
+	<div *ng-if="!showDetail">
+  	<h2><a [router-link]="getDetailLink(hero)" >{{hero.name}} is my hero, click for details!</a></h2>
+	</div>
+	<div *ng-if="showDetail">
+  	<h2>View {{hero.name}} details!</h2>
+		<div><label>id: </label>{{hero.id}}</div>
+		<div>
+			<label>name: </label>
+			<input [(ng-model)]="hero.name" placeholder="name"></input>
+		</div>
 	</div>
 </div>
