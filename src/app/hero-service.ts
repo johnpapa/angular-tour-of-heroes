@@ -1,4 +1,4 @@
-import {HEROES} from './heroes';
+import {HEROES} from './mock-heroes';
 
 export class HeroService {
 	getAllHeroes() { return Promise.resolve(HEROES); }
