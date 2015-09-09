@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "postinstall": "npm run tsd",
-    "tsd": "tsd reinstall -r -o --config src/tsd.json",
+    "tsd": "tsd reinstall -ro --config src/tsd.json",
     "tsc": "tsc -p src -w",
     "start": "live-server --open=src"
   },
