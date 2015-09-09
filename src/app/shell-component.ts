@@ -1,9 +1,10 @@
 import {View, Component} from 'angular2/angular2';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {RouteConfig} from 'angular2/router';
 import {HeroesComponent} from './heroes-component';
 import {HeroDetailComponent} from './hero-detail-component';
 import {AboutComponent} from './about-component';
 import {ROUTES} from './config';
+import {HERO_DIRECTIVES} from './hero-directives';
 
 @Component({ selector: 'my-shell' })
 @View({
@@ -11,7 +12,7 @@ import {ROUTES} from './config';
     <a [router-link]="['${ROUTES.heroes}']">Heroes</a>
     <a [router-link]="['${ROUTES.about}']">About</a>
     <router-outlet></router-outlet>`,
-  directives: [ROUTER_DIRECTIVES]
+  directives: [HERO_DIRECTIVES]
 })
 @RouteConfig([
   { path: '/', redirectTo: ROUTES.heroes }, //TODO: Need an otherwise instead

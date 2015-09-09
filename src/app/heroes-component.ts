@@ -1,13 +1,14 @@
-import {Component, NgClass, NgFor, NgIf, View} from 'angular2/angular2';
+import {Component, View} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {HeroService} from './hero-service';
 import {Hero} from './hero';
 import {ROUTES} from './config';
+import {HERO_DIRECTIVES} from './hero-directives';
 
-@Component({selector: 'my-heroes'})
+@Component({ selector: 'my-heroes' })
 @View({
   templateUrl: 'app/heroes-component.html',
-  directives: [NgClass, NgFor, NgIf],
+  directives: [HERO_DIRECTIVES],
   styleUrls: ['app/heroes-component.css']
 })
 export class HeroesComponent {
