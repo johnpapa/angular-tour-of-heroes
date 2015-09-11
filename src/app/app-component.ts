@@ -6,12 +6,13 @@ import {AboutComponent} from './about-component';
 import {ROUTES} from './config';
 import {HERO_DIRECTIVES} from './hero-directives';
 
-@Component({ selector: 'my-shell' })
-@View({
+@Component({ selector: 'my-app' })
+  @View({
   template: `
     <a [router-link]="['${ROUTES.heroes}']">Heroes</a>
     <a [router-link]="['${ROUTES.about}']">About</a>
-    <router-outlet></router-outlet>`,
+    <router-outlet></router-outlet>
+    `,
   directives: [HERO_DIRECTIVES]
 })
 @RouteConfig([
@@ -20,4 +21,4 @@ import {HERO_DIRECTIVES} from './hero-directives';
   { path: ROUTES.heroes, as: 'heroes', component: HeroesComponent },
   { path: ROUTES.detail + '/:id', as: 'detail', component: HeroDetailComponent }
 ])
-export class ShellComponent { }
+export class AppComponent { }

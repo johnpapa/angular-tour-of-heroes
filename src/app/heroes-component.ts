@@ -20,11 +20,9 @@ export class HeroesComponent {
   get heroes() {
     if (this._heroes) { return this._heroes; }
 
-    this._heroService.getAllHeroes().then(heroes => this._heroes = heroes);
+    this._heroService.getHeroes().then(heroes => this._heroes = heroes);
     return this._heroes;
   }
-
-  onSelect(hero: Hero) { this.currentHero = hero; }
 
   getSelectedClass(hero: Hero) {
     return { 'selected': hero === this.currentHero };
@@ -33,4 +31,6 @@ export class HeroesComponent {
   goDetail() {
     this._router.navigate(`${ROUTES.detail}/${this.currentHero.id}`);
   }
+
+  onSelect(hero: Hero) { this.currentHero = hero; }
 }
