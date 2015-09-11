@@ -1,7 +1,7 @@
 import {HEROES} from './mock-heroes';
 
 export class HeroService {
-	getAllHeroes() { return Promise.resolve(HEROES); }
+	getHeroes() { return Promise.resolve(HEROES); }
 
 	getHero(id: number) {
 		return Promise.resolve(HEROES)

@@ -7,11 +7,12 @@ import {ROUTES} from './config';
 import {HERO_DIRECTIVES} from './hero-directives';
 
 @Component({ selector: 'my-app' })
-@View({
+  @View({
   template: `
     <a [router-link]="['${ROUTES.heroes}']">Heroes</a>
     <a [router-link]="['${ROUTES.about}']">About</a>
-    <router-outlet></router-outlet>`,
+    <router-outlet></router-outlet>
+    `,
   directives: [HERO_DIRECTIVES]
 })
 @RouteConfig([
