@@ -2,7 +2,7 @@ import {Component, View} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {HeroService} from './hero-service';
 import {Hero} from './hero';
-import {ROUTES} from './config';
+import {Routes} from './route-config';
 import {HERO_DIRECTIVES} from './hero-directives';
 
 @Component({ selector: 'my-heroes' })
@@ -29,7 +29,7 @@ export class HeroesComponent {
   }
 
   goDetail() {
-    this._router.navigate(`${ROUTES.detail}/${this.currentHero.id}`);
+    this._router.navigate(`${Routes.detail.as}/${this.currentHero.id}`);
   }
 
   onSelect(hero: Hero) { this.currentHero = hero; }
