@@ -6,7 +6,7 @@ import {AboutComponent} from './about-component';
 import {ROUTES} from './config';
 import {HERO_DIRECTIVES} from './hero-directives';
 
-@Component({ selector: 'my-shell' })
+@Component({ selector: 'my-app' })
 @View({
   template: `
     <a [router-link]="['${ROUTES.heroes}']">Heroes</a>
@@ -20,4 +20,4 @@ import {HERO_DIRECTIVES} from './hero-directives';
   { path: ROUTES.heroes, as: 'heroes', component: HeroesComponent },
   { path: ROUTES.detail + '/:id', as: 'detail', component: HeroDetailComponent }
 ])
-export class ShellComponent { }
+export class AppComponent { }
