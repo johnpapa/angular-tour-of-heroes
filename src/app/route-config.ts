@@ -18,4 +18,6 @@ export var Routes = {
 		as: 'detail',
 		component: HeroDetailComponent
 	}
-}
+};
+
+export const APP_ROUTES = [this.Routes.dashboard, this.Routes.detail, this.Routes.heroes];

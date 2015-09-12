@@ -1,6 +1,6 @@
 import {View, Component} from 'angular2/angular2';
 import {RouteConfig} from 'angular2/router';
-import {Routes} from './route-config';
+import {Routes, APP_ROUTES} from './route-config';
 import {HERO_DIRECTIVES} from './hero-directives';
 
 @Component({ selector: 'my-app' })
@@ -12,5 +12,5 @@ import {HERO_DIRECTIVES} from './hero-directives';
     `,
   directives: [HERO_DIRECTIVES]
 })
-@RouteConfig([Routes.dashboard, Routes.detail, Routes.heroes])
+@RouteConfig(APP_ROUTES)
 export class AppComponent { }
