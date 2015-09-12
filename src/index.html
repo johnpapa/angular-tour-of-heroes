@@ -11,12 +11,12 @@
 </head>
 
 <body>
-  <my-app></my-app>
+  <my-app>Loading...</my-app>
   <script>
     System.config({
       packages: {'app': {defaultExtension: 'js'}}
     });
-    System.import('app/bootstrap');
+    System.import('app/bootstrap').catch(console.log.bind(console));
   </script>
 </body>
 
