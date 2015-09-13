@@ -1,8 +1,10 @@
 <div>
 	<h2>View {{hero.name}} details!</h2>
-	<div><label>id: </label>{{hero.id}}</div>
+	<div>
+		<label>id: </label>{{hero.id}}</div>
 	<div>
 		<label>name: </label>
 		<input [(ng-model)]="hero.name" placeholder="name"></input>
 	</div>
+	<button (click)="gotoHeroes()">Back</button>
 </div>
