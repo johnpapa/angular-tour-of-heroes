@@ -1,5 +1,5 @@
 {
-  "name": "ng2In20",
+  "name": "angular2-tour-of-heroes",
   "version": "0.0.1",
   "scripts": {
     "postinstall": "npm run tsd",
