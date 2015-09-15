@@ -1,15 +1,14 @@
 # Getting Started
 
-1. Must install pre-requisites
+1. Must install pre-requisites `npm install -g tsd typescript live-server`
 
-	```bash
-	npm install -g tsd typescript live-server
-	```
+1. Fork and cone this repo
+
+1. `npm install`
 
 1. Run the TypeScript compiler and watch for changes `npm run tsc`
 
 1. Open 2nd terminal and launch the app in the browser `npm start`
-
 
 ## Notes
 
