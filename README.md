@@ -2,7 +2,7 @@
 
 1. Must install pre-requisites `npm install -g tsd typescript live-server`
 
-1. Fork and cone this repo
+1. Fork and clone this repo
 
 1. `npm install`
 
