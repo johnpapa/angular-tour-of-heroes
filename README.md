@@ -14,7 +14,8 @@
 
 - Add redirectTo and/or otherwise routes
 - Replace mocks with http when ready
-- Update file names with dots when SystemJS 0.19 lands
+- /typings folder needs to be moved manually to the /src/typings folder
+- paths in the typings must be fixed too
 
 
 ## From Scratch

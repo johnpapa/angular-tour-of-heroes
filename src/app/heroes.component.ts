@@ -1,15 +1,15 @@
 import {Component, View} from 'angular2/angular2';
 import {Router} from 'angular2/router';
-import {HeroService} from './hero-service';
+import {HeroService} from './hero.service';
 import {Hero} from './hero';
-import {Routes} from './route-config';
-import {HERO_DIRECTIVES} from './hero-directives';
+import {Routes} from './route.config';
+import {HERO_DIRECTIVES} from './hero.constants';
 
 @Component({ selector: 'my-heroes' })
 @View({
-  templateUrl: 'app/heroes-component.html',
+  templateUrl: 'app/heroes.component.html',
   directives: [HERO_DIRECTIVES],
-  styleUrls: ['app/heroes-component.css']
+  styleUrls: ['app/heroes.component.css']
 })
 export class HeroesComponent {
   private _heroes: Hero[];
