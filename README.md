@@ -1,6 +1,6 @@
 # Getting Started
 
-1. Must install pre-requisites `npm install -g tsd typescript live-server`
+1. Must install pre-requisites `	npm install typescript live-server tsd@0.6.5-beta.2 -g`
 
 1. Fork and clone this repo
 
