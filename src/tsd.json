@@ -4,21 +4,5 @@
   "ref": "master",
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
-  "installed": {
-    "rx/rx.d.ts": {
-      "commit": "2031893e963cb986db7eea00d9e83c9b2b0fffee"
-    },
-    "angular2/angular2.d.ts": {
-      "commit": "2031893e963cb986db7eea00d9e83c9b2b0fffee"
-    },
-    "es6-promise/es6-promise.d.ts": {
-      "commit": "2031893e963cb986db7eea00d9e83c9b2b0fffee"
-    },
-    "angular2/router.d.ts": {
-      "commit": "2031893e963cb986db7eea00d9e83c9b2b0fffee"
-    },
-    "rx/rx-lite.d.ts": {
-      "commit": "2031893e963cb986db7eea00d9e83c9b2b0fffee"
-    }
-  }
+  "installed": {}
 }
