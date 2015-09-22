@@ -1,6 +1,6 @@
 # Getting Started
 
-1. Must install pre-requisites `	npm install typescript live-server tsd@0.6.5-beta.2 -g`
+1. Must install pre-requisites `npm install typescript live-server tsd@0.6.5-beta.2 -g`
 
 1. Fork and clone this repo
 
@@ -13,10 +13,10 @@
 ## Notes
 
 - Add redirectTo and/or otherwise routes
+- Fix http as it evolves
+- Manual typings fix for Pipes https://github.com/angular/angular/issues/4279
+- Update to use tsd 0.6.5 when out of beta
 - Replace mocks with http when ready
-- /typings folder needs to be moved manually to the /src/typings folder
-- paths in the typings must be fixed too
-
 
 ## From Scratch
 
