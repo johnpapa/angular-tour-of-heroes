@@ -8,7 +8,7 @@
     </li>
   </ul>
   <div *ng-if="currentHero">
-    <h2>{{currentHero.name}} is my hero</h2>
+    <h2>{{currentHero.name | uppercase}} is my hero</h2>
 		<button (click)="goDetail()">View Details</button>
   </div>
 </div>
