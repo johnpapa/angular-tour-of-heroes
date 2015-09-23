@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "angular2": "2.0.0-alpha.37",
-    "systemjs": "0.19.0",
+    "systemjs": "0.19.1",
     "traceur": "0.0.91"
   }
 }
