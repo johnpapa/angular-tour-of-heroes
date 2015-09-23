@@ -2,7 +2,7 @@ import {Component, View} from 'angular2/angular2';
 import {RouteParams, Router} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
-import {HERO_DIRECTIVES} from './hero.constants';
+import {HERO_DIRECTIVES} from './constants';
 import { Routes } from './route.config';
 
 @Component({selector: 'my-hero-detail'})

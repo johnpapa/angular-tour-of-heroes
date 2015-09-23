@@ -3,7 +3,7 @@ import {Router} from 'angular2/router';
 import {HeroService} from './hero.service';
 import {Hero} from './hero';
 import {Routes} from './route.config';
-import {HERO_DIRECTIVES} from './hero.constants';
+import {HERO_DIRECTIVES} from './constants';
 
 @Component({ selector: 'my-heroes' })
 @View({
