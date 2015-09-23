@@ -13,14 +13,18 @@ import {HERO_DIRECTIVES} from './constants';
 })
 export class HeroesComponent {
   private _heroes: Hero[];
-  currentHero: Hero;
+  public currentHero: Hero;
 
   constructor(private _heroService: HeroService, private _router: Router) { }
 
-  get heroes() {
-    if (this._heroes) { return this._heroes; }
+  get heroes() { return this._heroes || this.getHeroes(); }
 
-    this._heroService.getHeroes().then(heroes => this._heroes = heroes);
+  getHeroes() {
+    this.currentHero = undefined;
+    this._heroes = [];
+    this._heroService.getHeroes()
+      .then(heroes => this._heroes = heroes);
+
     return this._heroes;
   }
 
