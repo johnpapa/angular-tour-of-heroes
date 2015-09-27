@@ -6,6 +6,7 @@ import {HERO_DIRECTIVES} from './constants';
 @Component({ selector: 'my-app' })
 @View({
   template: `
+    <h1>{{title}}</h1>
     <a [router-link]="['/${Routes.dashboard.as}']">Dashboard</a>
     <a [router-link]="['/${Routes.heroes.as}']">Heroes</a>
     <router-outlet></router-outlet>
@@ -13,4 +14,6 @@ import {HERO_DIRECTIVES} from './constants';
   directives: [HERO_DIRECTIVES]
 })
 @RouteConfig(APP_ROUTES)
-export class AppComponent { }
+export class AppComponent {
+  public title = 'Tour of Heroes';
+}
