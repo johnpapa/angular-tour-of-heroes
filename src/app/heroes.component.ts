@@ -3,12 +3,12 @@ import {Router} from 'angular2/router';
 import {HeroService} from './hero.service';
 import {Hero} from './hero';
 import {Routes} from './route.config';
-import {HERO_DIRECTIVES} from './constants';
+import {COMMON_DIRECTIVES} from './constants';
 
 @Component({ selector: 'my-heroes' })
 @View({
   templateUrl: 'app/heroes.component.html',
-  directives: [HERO_DIRECTIVES],
+  directives: [COMMON_DIRECTIVES],
   styleUrls: ['app/heroes.component.css']
 })
 export class HeroesComponent {
