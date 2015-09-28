@@ -1,4 +1,4 @@
-import {Component, View} from 'angular2/angular2';
+import {Component, OnInit, View} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {HeroService} from './hero.service';
 import {Hero} from './hero';
@@ -11,21 +11,24 @@ import {COMMON_DIRECTIVES} from './constants';
   directives: [COMMON_DIRECTIVES],
   styleUrls: ['app/heroes.component.css']
 })
-export class HeroesComponent {
-  private _heroes: Hero[];
-  public currentHero: Hero;
+export class HeroesComponent implements OnInit {
+  heroes: Hero[];
+  currentHero: Hero;
 
   constructor(private _heroService: HeroService, private _router: Router) { }
 
-  get heroes() { return this._heroes || this.getHeroes(); }
+  onInit() {
+    this.heroes = this.getHeroes();
+  }
 
   getHeroes() {
     this.currentHero = undefined;
-    this._heroes = [];
-    this._heroService.getHeroes()
-      .then(heroes => this._heroes = heroes);
+    this.heroes = [];
 
-    return this._heroes;
+    this._heroService.getHeroes()
+      .then(heroes => this.heroes = heroes);
+
+    return this.heroes;
   }
 
   getSelectedClass(hero: Hero) {
