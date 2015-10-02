@@ -1,14 +1,13 @@
-import {Component, OnInit, View} from 'angular2/angular2';
+import {Component, OnInit, View, CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {HeroService} from './hero.service';
 import {Hero} from './hero';
 import {Routes} from './route.config';
-import {COMMON_DIRECTIVES} from './constants';
 
 @Component({ selector: 'my-heroes' })
 @View({
   templateUrl: 'app/heroes.component.html',
-  directives: [COMMON_DIRECTIVES],
+  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES],
   styleUrls: ['app/heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
