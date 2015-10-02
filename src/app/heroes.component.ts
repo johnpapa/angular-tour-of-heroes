@@ -11,8 +11,8 @@ import {Routes} from './route.config';
   styleUrls: ['app/heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroes: Hero[];
-  currentHero: Hero;
+  public heroes: Hero[];
+  public selectedHero: Hero;
 
   constructor(private _heroService: HeroService, private _router: Router) { }
 
@@ -21,7 +21,7 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes() {
-    this.currentHero = undefined;
+    this.selectedHero = undefined;
     this.heroes = [];
 
     this._heroService.getHeroes()
@@ -31,12 +31,12 @@ export class HeroesComponent implements OnInit {
   }
 
   getSelectedClass(hero: Hero) {
-    return { 'selected': hero === this.currentHero };
+    return { 'selected': hero === this.selectedHero };
   }
 
   goDetail() {
-    this._router.navigate(`${Routes.detail.as}/${this.currentHero.id}`);
+    this._router.navigate(`${Routes.detail.as}/${this.selectedHero.id}`);
   }
 
-  onSelect(hero: Hero) { this.currentHero = hero; }
+  onSelect(hero: Hero) { this.selectedHero = hero; }
 }
