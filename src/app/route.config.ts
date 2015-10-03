@@ -5,17 +5,17 @@ import {DashboardComponent} from './dashboard.component';
 export var Routes = {
 	dashboard: {
 		path: '/',
-		as: 'dashboard',
+		as: 'Dashboard',
 		component: DashboardComponent
 	},
 	heroes: {
 		path: '/heroes',
-		as: 'heroes',
+		as: 'Heroes',
 		component: HeroesComponent
 	},
 	detail: {
 		path: '/detail/:id',
-		as: 'detail',
+		as: 'Detail',
 		component: HeroDetailComponent
 	}
 };
