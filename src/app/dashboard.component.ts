@@ -12,13 +12,11 @@ import {Routes} from './route.config';
 })
 export class DashboardComponent implements OnInit{
 	public heroes: Hero[];
-	public villains: Hero[];
 
   constructor(private _heroService: HeroService, private _router: Router) { }
 
 	onInit() {
     this.heroes = this.getHeroes();
-    this.villains = this.getVillains();
   }
 
   gotoDetail(hero) {
@@ -32,16 +30,5 @@ export class DashboardComponent implements OnInit{
       .then(heroes => this.heroes = heroes);
 
     return this.heroes;
-  }
-
-  getVillains() {
-    this.villains = [];
-
-    this._heroService.getVillains()
-      .then(villains => {
-        this.villains = villains;
-      });
-
-    return this.villains;
   }
 }

@@ -38,10 +38,6 @@
 	background-color: #1171a3;
 }
 
-.villain {
-	background-color: #aa3031;
-}
-
 .module {
 	padding: 20px;
 	text-align: center;
@@ -53,11 +49,6 @@
 
 .hero:hover {
 	background-color: #52b9e9;
-	cursor: pointer;
-}
-
-.villain:hover {
-	background-color: #fa3031;
 	cursor: pointer;
 }
 

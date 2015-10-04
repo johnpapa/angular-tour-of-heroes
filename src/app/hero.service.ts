@@ -1,4 +1,4 @@
-import {HEROES, VILLAINS} from './mock-heroes';
+import {HEROES} from './mock-heroes';
 
 export class HeroService {
 	getHeroes() {
@@ -10,9 +10,5 @@ export class HeroService {
 			.then((heroes) => { return heroes.filter((h) => {
 				return h.id === id;
 			})[0]});
-	}
-
-	getVillains() {
-		return Promise.resolve(VILLAINS);
 	}
 }
