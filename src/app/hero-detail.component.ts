@@ -20,7 +20,6 @@ export class HeroDetailComponent {
   }
 
   gotoHeroes() {
-    //TODO: refactor to use the navigate with the tuple
-    this._router.navigateByUrl(`${Routes.heroes.as}`);
+    this._router.navigate([`/${Routes.heroes.as}`]);
   }
 }
