@@ -1,0 +1,91 @@
+[class*='col-'] {
+	float: left;
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+[class*='col-'] {
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+[class*='col-']:last-of-type {
+	padding-right: 0;
+}
+
+.grid {
+	background: white;
+	margin: 0 10em;
+}
+
+.grid:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-1-4 {
+	width: 25%;
+}
+
+.hero {
+	background-color: #1171a3;
+}
+
+.villain {
+	background-color: #aa3031;
+}
+
+.module {
+	padding: 20px;
+	text-align: center;
+	color: #eee;
+	font-family: Helvetica, Georgia, Arial, sans-serif;
+	max-height: 100px;
+	min-width: 120px;
+}
+
+.hero:hover {
+	background-color: #52b9e9;
+	cursor: pointer;
+}
+
+.villain:hover {
+	background-color: #fa3031;
+	cursor: pointer;
+}
+
+.grid-pad {
+	padding: 20px 0 20px 20px;
+}
+
+.grid-pad > [class*='col-']:last-of-type {
+	padding-right: 20px;
+}
+
+h3 {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+	.module {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.grid {
+		margin: 0;
+	}
+	.module {
+		min-width: 60px;
+	}
+}
+
