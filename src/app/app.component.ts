@@ -12,7 +12,8 @@ import {Routes, APP_ROUTES} from './route.config';
   `,
   styles: [`
     .router-link {padding: 5px;text-decoration: none;}
-    .router-link:visited {color: #444;}
+    .router-link:visited, .router-link:link {color: #444;}
+    .router-link:hover {color: white; background-color: #1171a3; text-decoration: none;}
     .router-link.router-link-active {color: white; background-color: #52b9e9; text-decoration: none;}
   `],
   directives: [CORE_DIRECTIVES, ROUTER_DIRECTIVES]
