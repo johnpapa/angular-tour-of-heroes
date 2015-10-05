@@ -1,7 +1,7 @@
 import {Component, CORE_DIRECTIVES, FORM_DIRECTIVES, OnInit, View} from 'angular2/angular2';
 import {Router} from 'angular2/router';
-import {HeroService} from './hero.service';
 import {Hero} from './hero';
+import {HeroService} from './hero.service';
 import {Routes} from './route.config';
 
 @Component({ selector: 'my-dashboard' })

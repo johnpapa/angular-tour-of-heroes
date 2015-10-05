@@ -20,14 +20,7 @@
 }
 
 .grid {
-	background: white;
 	margin: 0 10em;
-}
-
-.grid:after {
-	content: "";
-	display: table;
-	clear: both;
 }
 
 .col-1-4 {
@@ -42,8 +35,7 @@
 	padding: 20px;
 	text-align: center;
 	color: #eee;
-	font-family: Helvetica, Georgia, Arial, sans-serif;
-	max-height: 100px;
+	max-height: 120px;
 	min-width: 120px;
 }
 
@@ -68,6 +60,7 @@ h3 {
 @media (max-width: 600px) {
 	.module {
 		font-size: 10px;
+		max-height: 75px;
 	}
 }
 
