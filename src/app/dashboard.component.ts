@@ -10,7 +10,7 @@ import {Routes} from './route.config';
 	styleUrls: ['app/dashboard.component.css'],
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
-export class DashboardComponent implements OnInit{
+export class DashboardComponent implements OnInit {
 	public heroes: Hero[];
 
   constructor(private _heroService: HeroService, private _router: Router) { }
