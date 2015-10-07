@@ -6,8 +6,8 @@ import {Routes, APP_ROUTES} from './route.config';
 @View({
   template: `
     <h1>{{title}}</h1>
-    <a [router-link]="['/${Routes.dashboard.as}']" class="router-link">Dashboard</a>
-    <a [router-link]="['/${Routes.heroes.as}']" class="router-link">Heroes</a>
+    <a [router-link]="routes.dashboard.link" class="router-link">Dashboard</a>
+    <a [router-link]="routes.heroes.link" class="router-link">Heroes</a>
     <router-outlet></router-outlet>
   `,
   styles: [`
@@ -21,4 +21,5 @@ import {Routes, APP_ROUTES} from './route.config';
 @RouteConfig(APP_ROUTES)
 export class AppComponent {
   public title = 'Tour of Heroes';
+  public routes = Routes;
 }
