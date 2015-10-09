@@ -1,13 +1,14 @@
 import {Component, OnInit, View, CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {HeroService} from './hero.service';
+import {HeroDetailComponent} from './hero-detail.component';
 import {Hero} from './hero';
 import {Routes} from './route.config';
 
 @Component({ selector: 'my-heroes' })
 @View({
   templateUrl: 'app/heroes.component.html',
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES],
+  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, HeroDetailComponent],
   styleUrls: ['app/heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
@@ -15,8 +16,6 @@ export class HeroesComponent implements OnInit {
   public selectedHero: Hero;
 
   constructor(private _heroService: HeroService, private _router: Router) { }
-
-  onInit() { this.heroes = this.getHeroes(); }
 
   getHeroes() {
     this.selectedHero = undefined;
@@ -35,6 +34,8 @@ export class HeroesComponent implements OnInit {
   gotoDetail() {
     this._router.navigate([`/${Routes.detail.as}`, { id: this.selectedHero.id }]);
   }
+
+  onInit() { this.heroes = this.getHeroes(); }
 
   onSelect(hero: Hero) { this.selectedHero = hero; }
 }
