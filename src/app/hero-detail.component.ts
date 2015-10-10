@@ -1,4 +1,4 @@
-import {Component, OnInit, FORM_DIRECTIVES} from 'angular2/angular2';
+import {Component, FORM_DIRECTIVES, OnInit} from 'angular2/angular2';
 import {RouteParams, Router} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
