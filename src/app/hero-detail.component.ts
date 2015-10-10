@@ -1,4 +1,4 @@
-import {Component, OnInit, FORM_DIRECTIVES, View} from 'angular2/angular2';
+import {Component, OnInit, FORM_DIRECTIVES} from 'angular2/angular2';
 import {RouteParams, Router} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
@@ -6,11 +6,9 @@ import {Routes} from './route.config';
 
 @Component({
   selector: 'my-hero-detail',
-  inputs: ['hero']
-})
-@View({
   templateUrl: 'app/hero-detail.component.html',
-  directives: [FORM_DIRECTIVES]
+  directives: [FORM_DIRECTIVES],
+  inputs: ['hero']
 })
 export class HeroDetailComponent implements OnInit {
   public hero: Hero;
