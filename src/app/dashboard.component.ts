@@ -3,7 +3,7 @@ import {Router} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
-
+//asd
 @Component({
   selector: 'my-dashboard',
 	templateUrl: 'app/dashboard.component.html',
@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
     this.heroes = [];
 
     this._heroService.getHeroes()
-      .then(heroes => this.heroes = heroes);
+      .then((heroes: Hero[]) => this.heroes = heroes);
 
     return this.heroes;
   }

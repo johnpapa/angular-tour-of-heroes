@@ -4,6 +4,7 @@ import {Hero} from './hero';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
 
+// Here is a comment
 @Component({
   selector: 'my-hero-detail',
   templateUrl: 'app/hero-detail.component.html',
@@ -20,7 +21,7 @@ export class HeroDetailComponent implements OnInit {
   onInit() {
     if (!this.hero) {
       let id = +this._routeParams.get('id');
-      this._heroService.getHero(id).then(hero => this.hero = hero);
+      this._heroService.getHero(id).then((hero: Hero) => this.hero = hero);
     }
   }
 
