@@ -1,0 +1,14 @@
+{
+  "version": "1.6.2",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true
+  },
+  "files": [
+    "src/app/bootstrap.ts",
+    "src/typings/tsd.d.ts"
+  ]
+}

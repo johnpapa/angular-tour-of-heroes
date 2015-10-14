@@ -11,6 +11,8 @@
   },
   "devDependencies": {
     "live-server": "^0.8.1",
-    "typescript": "^1.6.2"
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
   }
 }
