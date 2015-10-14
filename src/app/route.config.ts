@@ -7,22 +7,19 @@ export var Routes = {
 		path: '/',
     as: 'Dashboard',
 		component: DashboardComponent,
-    caption: 'Dashboard',
-    link: ['/Dashboard']
+    caption: 'Dashboard'
 	},
 	heroes: {
 		path: '/heroes',
 		as: 'Heroes',
     caption: 'Heroes',
-		component: HeroesComponent,
-    link: ['/Heroes']
+		component: HeroesComponent
 	},
 	detail: {
 		path: '/detail/:id',
 		as: 'Detail',
     caption: 'Hero Detail',
-		component: HeroDetailComponent,
-    link: ['/Detail']
+		component: HeroDetailComponent
 	}
 };
 

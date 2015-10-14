@@ -2,12 +2,12 @@ import {View, Component, CORE_DIRECTIVES} from 'angular2/angular2';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Routes, APP_ROUTES} from './route.config';
 
-@Component({ selector: 'my-app' })
-@View({
+@Component({
+  selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
-    <a [router-link]="routes.dashboard.link" class="router-link">Dashboard</a>
-    <a [router-link]="routes.heroes.link" class="router-link">Heroes</a>
+    <a [router-link]="['/' + routes.dashboard.as]" class="router-link">{{routes.dashboard.caption}}</a>
+    <a [router-link]="['/' + routes.heroes.as]" class="router-link">{{routes.heroes.caption}}</a>
     <router-outlet></router-outlet>
   `,
   styles: [`
