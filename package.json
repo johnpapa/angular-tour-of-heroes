@@ -2,18 +2,15 @@
   "name": "angular2-tour-of-heroes",
   "version": "0.0.1",
   "scripts": {
-    "postinstall": "npm run tsd",
-    "tsd": "tsd link --config src/tsd.json",
     "tsc": "tsc -p src -w",
     "start": "live-server --open=src"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.40",
+    "angular2": "2.0.0-alpha.42",
     "systemjs": "0.19.2"
   },
   "devDependencies": {
     "live-server": "^0.8.1",
-    "tsd": "^0.6.5",
     "typescript": "^1.6.2"
   }
 }
