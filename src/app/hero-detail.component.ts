@@ -4,7 +4,6 @@ import {Hero} from './hero';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
 
-// Here is a comment
 @Component({
   selector: 'my-hero-detail',
   templateUrl: 'app/hero-detail.component.html',
