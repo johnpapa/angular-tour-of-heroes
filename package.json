@@ -6,8 +6,8 @@
     "start": "live-server --open=src"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.44",
-    "systemjs": "0.19.2"
+    "angular2": "2.0.0-alpha.45",
+    "systemjs": "0.19.5"
   },
   "devDependencies": {
     "live-server": "^0.8.1",
