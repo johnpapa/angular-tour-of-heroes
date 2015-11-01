@@ -4,7 +4,7 @@
     <li *ng-for="#hero of heroes"
       [ng-class]="getSelectedClass(hero)"
       (click)="onSelect(hero)">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}</a>
+      <a><span class="badge">{{hero.id}}</span> {{hero.name}}</a>
     </li>
   </ul>
   <div *ng-if="selectedHero">
