@@ -3,18 +3,15 @@ import {HeroDetailComponent} from './hero-detail.component';
 import {DashboardComponent} from './dashboard.component';
 import {Router} from 'angular2/router';
 
-class Route {
+export class Route {
   constructor(
     public path:string,
     public as:string,
-    public component:any ){}
-
-    get link() { return [this.as]; }
-    to(option?:{}){ return [this.as, option || {}]; }
+    public component:any ) { }
 }
 
 export var Routes = {
-	dashboard: new Route('/', 'Dashboard', DashboardComponent ),
+  dashboard: new Route('/', 'Dashboard', DashboardComponent ),
   heroes: new Route('/heroes', 'Heroes', HeroesComponent ),
   detail: new Route('/detail/:id', 'Detail', HeroDetailComponent )
 };
