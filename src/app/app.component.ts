@@ -6,8 +6,8 @@ import {Routes, APP_ROUTES} from './route.config';
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
-    <a [router-link]="['/' + routes.dashboard.as]" class="router-link">Dashboard</a>
-    <a [router-link]="['/' + routes.heroes.as]" class="router-link">Heroes</a>
+    <a [router-link]="[routes.dashboard.as]" class="router-link">Dashboard</a>
+    <a [router-link]="[routes.heroes.as]" class="router-link">Heroes</a>
     <router-outlet></router-outlet>
   `,
   styles: [`

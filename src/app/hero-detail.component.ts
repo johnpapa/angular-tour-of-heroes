@@ -25,6 +25,6 @@ export class HeroDetailComponent implements OnInit {
   }
 
   gotoHeroes() {
-    this._router.navigate([`/${Routes.heroes.as}`]);
+    this._router.navigate([Routes.heroes.as]);
   }
 }

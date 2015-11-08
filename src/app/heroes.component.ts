@@ -27,12 +27,12 @@ export class HeroesComponent implements OnInit {
     return this.heroes;
   }
 
-  getSelectedClass(hero: Hero) {
-    return { 'selected': hero === this.selectedHero };
+  isSelectedHero(hero: Hero) {
+    return hero === this.selectedHero;
   }
 
   gotoDetail() {
-    this._router.navigate([`/${Routes.detail.as}`, { id: this.selectedHero.id }]);
+    this._router.navigate([Routes.detail.as,{ id: this.selectedHero.id }]);
   }
 
   onInit() {
