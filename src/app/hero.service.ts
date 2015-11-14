@@ -8,8 +8,6 @@ export class HeroService {
 
 	getHero(id: number) {
 		return Promise.resolve(HEROES)
-			.then((heroes: Hero[]) => { return heroes.filter((h) => {
-				return h.id === id;
-			})[0]});
+			.then(heroes => heroes.filter(h => h.id === id)[0]);
 	}
 }
