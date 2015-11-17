@@ -20,7 +20,7 @@ export class HeroDetailComponent implements OnInit {
   onInit() {
     if (!this.hero) {
       let id = +this._routeParams.get('id');
-      this._heroService.getHero(id).then((hero: Hero) => this.hero = hero);
+      this._heroService.getHero(id).then(hero => this.hero = hero);
     }
   }
 
