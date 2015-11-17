@@ -11,7 +11,7 @@ export const ROUTE_NAMES = {
 
 export const ROUTES: RouteDefinition[] = [
   // {path: '/', redirectTo: '/dashboard' },
-  {path: '/dashboard', name: ROUTE_NAMES.dashboard, component: DashboardComponent},
+  {path: '/', name: ROUTE_NAMES.dashboard, component: DashboardComponent},
   {path: '/heroes', name: ROUTE_NAMES.heroes, component: HeroesComponent},
   {path: '/detail/:id', name: ROUTE_NAMES.heroDetail, component: HeroDetailComponent}
 ];
