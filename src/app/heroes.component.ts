@@ -3,7 +3,7 @@ import {Router} from 'angular2/router';
 import {HeroService} from './hero.service';
 import {HeroDetailComponent} from './hero-detail.component';
 import {Hero} from './hero';
-import {Routes} from './route.config';
+import {ROUTE_NAMES} from './route.config';
 
 @Component({
   selector: 'my-heroes',
@@ -28,7 +28,7 @@ export class HeroesComponent implements OnInit {
   }
 
   gotoDetail() {
-    this._router.navigate([Routes.detail.as,{ id: this.selectedHero.id }]);
+    this._router.navigate([ROUTE_NAMES.heroDetail,{ id: this.selectedHero.id }]);
   }
 
   onInit() {

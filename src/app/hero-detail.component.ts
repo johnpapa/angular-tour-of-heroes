@@ -2,7 +2,7 @@ import {Component, CORE_DIRECTIVES, FORM_DIRECTIVES, OnInit} from 'angular2/angu
 import {RouteParams, Router} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
-import {Routes} from './route.config';
+import {ROUTE_NAMES} from './route.config';
 
 @Component({
   selector: 'my-hero-detail',
@@ -25,6 +25,6 @@ export class HeroDetailComponent implements OnInit {
   }
 
   gotoHeroes() {
-    this._router.navigate([Routes.heroes.as]);
+    this._router.navigate([ROUTE_NAMES.heroes]);
   }
 }
