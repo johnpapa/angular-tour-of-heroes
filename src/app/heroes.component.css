@@ -1,8 +1,22 @@
-.heroes {list-style-type: none; margin-left: 1em; padding: 0; width: 10em;}
+.heroes {
+	list-style-type: none;
+	margin-left: 1em;
+	padding: 0;
+	width: 10em;
+}
 
-.heroes li { cursor: pointer; position: relative; left: 0; transition: all 0.2s ease; }
+.heroes li {
+	cursor: pointer;
+	position: relative;
+	left: 0;
+	transition: all 0.2s ease;
+}
 
-.heroes li:hover {color: #369; background-color: #EEE; left: .2em;}
+.heroes li:hover {
+	color: #369;
+	background-color: #EEE;
+	left: .2em;
+}
 
 .heroes .badge {
 	font-size: small;
@@ -14,4 +28,6 @@
 	left: -1px;
 	top: -1px;
 }
-.selected { background-color: #EEE; color: #369; }
+.selected {
+	background-color: #EEE; color: #369;
+}
