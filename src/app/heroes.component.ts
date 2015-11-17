@@ -21,14 +21,13 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = undefined;
     this.heroes = [];
 
-    this._heroService.getHeroes()
-      .then((heroes: Hero[]) => this.heroes = heroes);
+    this._heroService.getHeroes().then(heroes => this.heroes = heroes);
 
     return this.heroes;
   }
 
   gotoDetail() {
-    this._router.navigate([ROUTE_NAMES.heroDetail,{ id: this.selectedHero.id }]);
+    this._router.navigate([ROUTE_NAMES.heroDetail, { id: this.selectedHero.id }]);
   }
 
   onInit() {
