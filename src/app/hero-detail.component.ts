@@ -1,5 +1,5 @@
 import {Component, OnInit} from 'angular2/angular2';
-import {RouteParams, Router} from 'angular2/router';
+import {RouteParams} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
 import {ROUTE_NAMES} from './route.config';
@@ -13,7 +13,7 @@ export class HeroDetailComponent implements OnInit {
   public hero: Hero;
 
   constructor(private _heroService: HeroService,
-    private _routeParams: RouteParams, private _router: Router) {
+    private _routeParams: RouteParams) {
   }
 
   onInit() {
@@ -23,7 +23,7 @@ export class HeroDetailComponent implements OnInit {
     }
   }
 
-  gotoHeroes() {
-    this._router.navigate([ROUTE_NAMES.heroes]);
+  goBack() {
+    window.history.back();
   }
 }
