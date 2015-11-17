@@ -2,14 +2,17 @@ import {HEROES} from './mock-heroes';
 import {Hero} from './hero';
 
 export class HeroService {
-	getHeroes() {
+
+	public getHeroes():Promise<Hero[]> {
 		return Promise.resolve(HEROES);
 	}
 
-	getHero(id: number) {
+	public getHero(id:number):Promise<Hero> {
 		return Promise.resolve(HEROES)
-			.then((heroes: Hero[]) => { return heroes.filter((h) => {
-				return h.id === id;
-			})[0]});
+			.then((heroes:Hero[]) => {
+				return heroes.filter((h) => {
+					return h.id === id;
+				})[0];
+			});
 	}
 }
