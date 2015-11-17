@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "scripts": {
     "tsc": "tsc -p src -w",
-    "start": "live-server --open=src"
+    "start": "live-server --open=src",
+    "lite": "lite-server --source src"
   },
   "dependencies": {
     "angular2": "2.0.0-alpha.46",
     "systemjs": "0.19.5"
   },
   "devDependencies": {
+    "lite-server": "^1.2.0",
     "live-server": "^0.8.1",
     "typescript": "^1.6.2"
   }
