@@ -1,4 +1,4 @@
-import {Component, CORE_DIRECTIVES, OnInit} from 'angular2/angular2';
+import {Component, OnInit} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
@@ -7,11 +7,10 @@ import {ROUTE_NAMES} from './route.config';
 @Component({
   selector: 'my-dashboard',
   templateUrl: 'app/dashboard.component.html',
-  styleUrls: ['app/dashboard.component.css'],
-  directives: [CORE_DIRECTIVES]
+  styleUrls: ['app/dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  public heroes: Hero[];
+  public heroes: Hero[] = [];
 
   constructor(private _heroService: HeroService, private _router: Router) { }
 

@@ -1,4 +1,4 @@
-import {Component, CORE_DIRECTIVES, FORM_DIRECTIVES, OnInit} from 'angular2/angular2';
+import {Component, OnInit} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {HeroService} from './hero.service';
 import {HeroDetailComponent} from './hero-detail.component';
@@ -9,7 +9,7 @@ import {ROUTE_NAMES} from './route.config';
   selector: 'my-heroes',
   templateUrl: 'app/heroes.component.html',
   styleUrls: ['app/heroes.component.css'],
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, HeroDetailComponent]
+  directives: [HeroDetailComponent]
 })
 export class HeroesComponent implements OnInit {
   public heroes: Hero[];
