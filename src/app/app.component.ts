@@ -1,6 +1,6 @@
 import {Component} from 'angular2/angular2';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
-import {ROUTE_NAMES, ROUTES} from './route.config';
+import {ROUTE_NAMES, ROUTES} from './routes';
 
 @Component({
   selector: 'my-app',
