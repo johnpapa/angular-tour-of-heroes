@@ -6,11 +6,11 @@
     "start": "lite-server --open src"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.46",
-    "systemjs": "0.19.5"
+    "angular2": "2.0.0-alpha.47",
+    "systemjs": "0.19.6"
   },
   "devDependencies": {
-    "lite-server": "^1.3.0",
-    "typescript": "^1.6.2"
+    "lite-server": "^1.3.1",
+    "typescript": "^1.7.3"
   }
 }
