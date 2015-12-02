@@ -1,4 +1,4 @@
-import {Route, RouteDefinition} from 'angular2/router';
+import {RouteDefinition} from 'angular2/router';
 import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
 import {DashboardComponent} from './dashboard.component';
