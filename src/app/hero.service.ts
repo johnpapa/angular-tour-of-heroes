@@ -1,6 +1,5 @@
 import {Injectable} from 'angular2/angular2';
 import {HEROES} from './mock-heroes';
-import {Hero} from './hero';
 
 @Injectable()
 export class HeroService {

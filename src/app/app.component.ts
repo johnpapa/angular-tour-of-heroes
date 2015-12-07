@@ -1,13 +1,15 @@
 import {Component} from 'angular2/angular2';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
-import {ROUTE_NAMES, ROUTES} from './routes';
+import {HeroesComponent} from './heroes.component';
+import {HeroDetailComponent} from './hero-detail.component';
+import {DashboardComponent} from './dashboard.component';
 
 @Component({
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
-    <a [router-link]="[routes.dashboard]">Dashboard</a>
-    <a [router-link]="[routes.heroes]">Heroes</a>
+    <a [router-link]="['Dashboard']">Dashboard</a>
+    <a [router-link]="['Heroes']">Heroes</a>
     <router-outlet></router-outlet>
   `,
   styles: [`
@@ -18,8 +20,12 @@ import {ROUTE_NAMES, ROUTES} from './routes';
   `],
   directives: [ROUTER_DIRECTIVES]
 })
-@RouteConfig(ROUTES)
+@RouteConfig([
+  {path: '/', redirectTo: ['Dashboard'] },
+  {path: '/dashboard', name: 'Dashboard', component: DashboardComponent},
+  {path: '/heroes', name: 'Heroes', component: HeroesComponent},
+  {path: '/detail/:id', name: 'HeroDetail', component: HeroDetailComponent}
+])
 export class AppComponent {
   public title = 'Tour of Heroes';
-  public routes = ROUTE_NAMES;
 }
