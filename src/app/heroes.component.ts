@@ -1,4 +1,4 @@
-import {Component, OnInit} from 'angular2/angular2';
+import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
 import {HeroService} from './hero.service';
 import {HeroDetailComponent} from './hero-detail.component';
