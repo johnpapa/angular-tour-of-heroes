@@ -6,23 +6,13 @@ import {DashboardComponent} from './dashboard.component';
 
 @Component({
   selector: 'my-app',
-  template: `
-    <h1>{{title}}</h1>
-    <a [router-link]="['Dashboard']">Dashboard</a>
-    <a [router-link]="['Heroes']">Heroes</a>
-    <router-outlet></router-outlet>
-  `,
-  styles: [`
-    a {padding: 5px;text-decoration: none;}
-    a:visited, a:link {color: #444;}
-    a:hover {color: white; background-color: #1171a3;}
-    a.router-link-active {color: white; background-color: #52b9e9;}
-  `],
+  templateUrl: 'app/app.component.html',
+  styleUrls: ['app/app.component.css'],
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
   {path: '/', redirectTo: ['Dashboard'] },
-  {path: '/dashboard', name: 'Dashboard', component: DashboardComponent},
+  {path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true},
   {path: '/heroes', name: 'Heroes', component: HeroesComponent},
   {path: '/detail/:id', name: 'HeroDetail', component: HeroDetailComponent}
 ])
