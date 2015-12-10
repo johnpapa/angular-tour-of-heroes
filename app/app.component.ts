@@ -11,7 +11,7 @@ import {DashboardComponent} from './dashboard.component';
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  {path: '/', redirectTo: ['Dashboard'] },
+  // {path: '/', redirectTo: ['Dashboard'] },
   {path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true},
   {path: '/heroes', name: 'Heroes', component: HeroesComponent},
   {path: '/detail/:id', name: 'HeroDetail', component: HeroDetailComponent}
