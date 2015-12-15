@@ -5,18 +5,21 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "live": "live-server",
     "start": "npm run lite",
-    "both": "concurrent \"npm run tsc:w\" \"npm run start\" "
+    "go": "concurrent \"npm run tsc:w\" \"npm run start\" "
   },
   "dependencies": {
-    "angular2": "^2.0.0-alpha.52",
-    "systemjs": "^0.19.6"
+    "angular2": "^2.0.0-alpha.55",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "systemjs": "^0.19.8",
+    "zone.js": "^0.5.10"
   },
   "devDependencies": {
-    "concurrently" : "^1.0.0",
+    "concurrently": "^1.0.0",
     "lite-server": "^1.2.0",
-    "live-server": "^0.8.2",
     "typescript": "^1.7.3"
   }
 }
