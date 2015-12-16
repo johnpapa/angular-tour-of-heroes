@@ -9,13 +9,8 @@
     "go": "concurrent \"npm run tsc:w\" \"npm run start\" "
   },
   "dependencies": {
-    "angular2": "^2.0.0-alpha.55",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.13",
-    "reflect-metadata": "^0.1.2",
-    "rxjs": "^5.0.0-beta.0",
-    "systemjs": "^0.19.8",
-    "zone.js": "^0.5.10"
+    "angular2": "^2.0.0-beta.0",
+    "systemjs": "^0.19.8"
   },
   "devDependencies": {
     "concurrently": "^1.0.0",

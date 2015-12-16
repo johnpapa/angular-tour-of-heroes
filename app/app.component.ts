@@ -13,6 +13,7 @@ import {DashboardComponent} from './dashboard.component';
     <router-outlet></router-outlet>
   `,
   styles: [`
+    a {padding: 5px;text-decoration: none;}
     a:visited, a:link {color: #444;}
     a:hover {color: white; background-color: #1171a3;}
     a.router-link-active {color: white; background-color: #52b9e9;}
