@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
 import {DashboardComponent} from './dashboard.component';
+import {HeroService} from './hero.service';
 
 @Component({
   selector: 'my-app',
@@ -18,7 +19,8 @@ import {DashboardComponent} from './dashboard.component';
     a:hover {color: white; background-color: #1171a3;}
     a.router-link-active {color: white; background-color: #52b9e9;}
   `],
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES],
+  providers: [HeroService]
 })
 @RouteConfig([
   // {path: '/', redirectTo: ['Dashboard'] },
