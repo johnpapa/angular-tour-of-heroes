@@ -6,7 +6,7 @@
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 10em;
+  width: 16em;
 }
 .heroes li {
   cursor: pointer;
@@ -24,7 +24,7 @@
   left: .1em;
 }
 .heroes li.selected:hover {
-  color: white;
+  color: black;
 }
 .heroes .text {
   position: relative;
