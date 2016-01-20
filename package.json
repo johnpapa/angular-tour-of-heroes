@@ -8,7 +8,7 @@
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
   },
   "dependencies": {
-    "angular2": "^2.0.0-beta.0",
+    "angular2": "2.0.0-beta.0",
     "systemjs": "^0.19.9",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
