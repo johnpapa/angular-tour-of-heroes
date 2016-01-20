@@ -11,8 +11,7 @@
   <script src="node_modules/angular2/bundles/router.dev.js"></script>
   <script>
       System.config({packages: {app: {format: 'register',defaultExtension: 'js'}}});
-      System.import('app/boot')
-            .then(null, console.error.bind(console));
+      System.import('app/boot').catch(console.error.bind(console));
   </script>
 </head>
 
