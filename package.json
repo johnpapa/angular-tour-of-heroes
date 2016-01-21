@@ -4,7 +4,7 @@
   "scripts": {
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "lite": "lite-server",
+    "lite": "browser-sync start --config bs-config.js",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
   },
   "dependencies": {
@@ -17,8 +17,10 @@
     "zone.js": "^0.5.10"
   },
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "concurrently": "^1.0.0",
-    "lite-server": "^1.3.2",
+    "connect-history-api-fallback": "^1.1.0",
+    "connect-logger": "0.0.1",
     "typescript": "^1.7.5"
   }
 }
