@@ -3,7 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
 import {DashboardComponent} from './dashboard.component';
-import {HeroService} from './hero.service';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'my-app',
@@ -20,9 +20,9 @@ import {HeroService} from './hero.service';
   providers: [HeroService, ROUTER_PROVIDERS]
 })
 @RouteConfig([
-  {path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true},
-  {path: '/heroes', name: 'Heroes', component: HeroesComponent},
-  {path: '/detail/:id', name: 'HeroDetail', component: HeroDetailComponent}
+  { path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true },
+  { path: '/heroes', name: 'Heroes', component: HeroesComponent },
+  { path: '/detail/:id', name: 'HeroDetail', component: HeroDetailComponent }
 ])
 export class AppComponent {
   public title = 'Tour of Heroes';
