@@ -10,8 +10,8 @@
     "typings": "typings"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.8",
-    "systemjs": "0.19.20",
+    "angular2": "2.0.0-beta.9",
+    "systemjs": "0.19.22",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "reflect-metadata": "0.1.2",
@@ -19,9 +19,9 @@
     "zone.js": "0.5.15"
   },
   "devDependencies": {
-    "concurrently": "^1.0.0",
+    "concurrently": "^2.0.0",
     "lite-server": "^2.1.0",
-    "typescript": "^1.7.5",
+    "typescript": "^1.8.2",
     "typings": "^0.6.8"
   }
 }
