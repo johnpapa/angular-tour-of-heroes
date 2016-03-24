@@ -10,15 +10,15 @@
     "forin": true,
     "indent": [
       true,
-      "tabs"
+      "spaces"
     ],
     "label-position": true,
     "label-undefined": true,
     "max-line-length": [
       true,
-      14
+      140
     ],
-    "member-access": true,
+    "member-access": false,
     "member-ordering": [
       true,
       "public-before-private",
@@ -45,7 +45,6 @@
     "no-shadowed-variable": true,
     "no-string-literal": true,
     "no-switch-case-fall-through": true,
-    "no-trailing-comma": true,
     "no-trailing-whitespace": true,
     "no-unused-expression": true,
     "no-unused-variable": true,
@@ -61,12 +60,10 @@
       "check-whitespace"
     ],
     "radix": true,
-    "rules": {
-      "quotemark": [
-        true,
-        "single"
-      ]
-    },
+    "quotemark": [
+      true,
+      "single"
+    ],
     "semicolon": [
       "always"
     ],
