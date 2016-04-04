@@ -2,17 +2,17 @@
   "compilerOptions": {
     "target": "es5",
     "module": "system",
+    "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "removeComments": false,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
     "node_modules",
-    "typings/main.d.ts",
-    "typings/main"
+    "typings/main",
+    "typings/main.d.ts"
   ]
 }
