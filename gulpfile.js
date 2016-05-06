@@ -81,7 +81,7 @@ gulp.task('watch', ['app:build'], function () {
     //var server = livereload;
     livereload.listen();
     // .js files
-    gulp.watch('./app/**/*.js', ['app:js:build']);
+    gulp.watch('./app/**/*.js', ['app:build']);
 
     var buildDir = './build/index.html';
     gulp.watch(buildDir).on('change', function (file) {
