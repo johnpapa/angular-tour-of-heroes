@@ -21,6 +21,16 @@
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
-    "typings": "^0.7.12"
+    "typings": "^0.7.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-watch": "^4.3.5",
+    "gulp": "^3.9.1",
+    "q": "^1.4.1",
+    "run-sequence": "^1.1.5",
+    "gulp-util": "^3.0.7",
+    "gulp-typescript": "^2.13.0",
+    "gulp-sourcemaps": "^1.6.0"
   }
 }
