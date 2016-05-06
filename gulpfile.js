@@ -18,6 +18,7 @@ gulp.task('app:node_modules:build', function(){
     gulp.src([
         "node_modules/es6-shim/es6-shim.min.js",
         "node_modules/systemjs/dist/system-polyfills.js",
+        "node_modules/angular2/es6/dev/src/testing/shims_for_IE.js",
         "node_modules/angular2/bundles/angular2-polyfills.js",
         "node_modules/systemjs/dist/system.js",
         "node_modules/rxjs/bundles/Rx.js",
