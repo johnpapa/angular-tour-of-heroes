@@ -1,5 +1,5 @@
-import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { Component, provide } from 'angular2/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy } from 'angular2/router';
 
 import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
@@ -19,8 +19,9 @@ import { HeroService } from './hero.service';
   styleUrls: ['app/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
-    ROUTER_PROVIDERS,
-    HeroService
+    HeroService,
+    ROUTER_PROVIDERS, provide(LocationStrategy, {useClass: HashLocationStrategy})
+    
   ]
 })
 @RouteConfig([
