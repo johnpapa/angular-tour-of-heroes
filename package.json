@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "css-loader": "^0.23.1",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-livereload": "^3.8.1",
@@ -29,7 +30,10 @@
     "gulp-watch": "^4.3.5",
     "lite-server": "^2.2.0",
     "q": "^1.4.1",
+    "raw-loader": "^0.5.1",
     "run-sequence": "^1.1.5",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
     "typescript": "^1.8.10",
     "typings": "^0.7.12",
     "webpack": "^1.13.0",
