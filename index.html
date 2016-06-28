@@ -1,38 +1,23 @@
-<!DOCTYPE html>
 <html>
-  <!-- #docregion head -->
-    <!-- #docregion base-href -->
   <head>
     <base href="/">
-    <!-- #enddocregion base-href -->
-    <title>Angular 2 Tour of Heroes</title>
+    <title>Angular 2 QuickStart</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- #enddocregion head -->
-    <!-- #docregion css -->
     <link rel="stylesheet" href="styles.css">
-    <!-- #enddocregion css -->
-    <!-- #docregion head -->
-    <!-- IE required polyfills, in this exact order -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
-
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <!-- 1. Load libraries -->
+     <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-    <!-- #docregion router -->
-    <script src="node_modules/angular2/bundles/router.dev.js"></script>
-    <!-- #enddocregion router -->
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
     <script>
-      System.config({packages: {app: {format: 'register', defaultExtension: 'js'}}});
-      System.import('app/main')
-            .then(null, console.error.bind(console));
+      System.import('app').catch(function(err){ console.error(err); });
     </script>
   </head>
-  <!-- #enddocregion head -->
-
+  <!-- 3. Display the application -->
   <body>
     <my-app>Loading...</my-app>
   </body>
