@@ -9,12 +9,9 @@ import { XHRBackend } from '@angular/http';
 import { InMemoryBackendService, SEED_DATA } from 'angular2-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
+import './rxjs-extensions';
 import { AppComponent } from './app.component';
-import { routing } from './app.routing';
-
-import { HeroesComponent } from './heroes.component';
-import { DashboardComponent } from './dashboard.component';
-import { HeroDetailComponent } from './hero-detail.component';
+import { routing, routedComponents } from './app.routing';
 import { HeroService } from './hero.service';
 import { HeroSearchComponent } from './hero-search.component';
 
@@ -27,10 +24,8 @@ import { HeroSearchComponent } from './hero-search.component';
   ],
   declarations: [
     AppComponent,
-    HeroesComponent,
-    DashboardComponent,
-    HeroDetailComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    routedComponents
   ],
   providers: [
     HeroService,
@@ -39,5 +34,4 @@ import { HeroSearchComponent } from './hero-search.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
