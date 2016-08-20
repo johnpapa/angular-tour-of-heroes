@@ -24,6 +24,7 @@ button:hover {
 }
 button:disabled {
   background-color: #eee;
-  color: #ccc; 
+  color: #ccc;
   cursor: auto;
 }
+Ï
