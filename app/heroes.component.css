@@ -1,5 +1,6 @@
 .selected {
   background-color: #CFD8DC !important;
+  background-color: rgb(0,120,215) !important;
   color: white;
 }
 .heroes {
@@ -20,11 +21,12 @@
 }
 .heroes li:hover {
   color: #607D8B;
+  color: rgb(0,120,215);
   background-color: #DDD;
   left: .1em;
 }
 .heroes li.selected:hover {
-  background-color: #BBD8DC !important;
+  /*background-color: #BBD8DC !important;*/
   color: white;
 }
 .heroes .text {
@@ -37,6 +39,7 @@
   color: white;
   padding: 0.8em 0.7em 0 0.7em;
   background-color: #607D8B;
+  background-color: rgb(0,120,215);
   line-height: 1em;
   position: relative;
   left: -1px;
@@ -61,5 +64,6 @@ button:hover {
 button.delete-button{
   float:right;
   background-color: gray !important;
+  background-color: rgb(216,59,1) !important;
   color:white;
 }

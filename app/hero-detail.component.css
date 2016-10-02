@@ -3,6 +3,7 @@ label {
   width: 3em;
   margin: .5em 0;
   color: #607D8B;
+  color: rgb(0,120,215);
   font-weight: bold;
 }
 input {

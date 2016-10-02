@@ -1,6 +1,7 @@
 h1 {
   font-size: 1.2em;
   color: #999;
+  color: #555;
   margin-bottom: 0;
 }
 h2 {
@@ -25,4 +26,10 @@ nav a:hover {
 }
 nav a.router-link-active {
   color: #039be5;
+}
+.header-bar {
+  background-color: rgb(0,120,215);
+  height: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
