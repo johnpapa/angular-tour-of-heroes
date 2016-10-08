@@ -31,8 +31,8 @@ gulp.task('gzip', function () {
     .pipe(gulp.dest(config.dest));
 });
 
-gulp.task('copy-aot-gz', ['clean'], function () {
-  log('copy aot gz');
+gulp.task('copy-aot-gzip', ['gzip', 'clean'], function () {
+  log('copy aot gzip');
   return copyIndex(config.index.aotgz);
 });
 
