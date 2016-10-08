@@ -12,6 +12,7 @@ var config = {
   index: {
     run: 'index.html',
     aot: 'index-aot.html',
+    aotgz: 'index-aot-gzip.html',
     jit: 'index-jit.html'
   },
   dest: './dist',
@@ -28,6 +29,11 @@ gulp.task('gzip', function () {
   return gulp.src(source)
     .pipe($.gzip())
     .pipe(gulp.dest(config.dest));
+});
+
+gulp.task('copy-aot-gz', ['clean'], function () {
+  log('copy aot gz');
+  return copyIndex(config.index.aotgz);
 });
 
 gulp.task('copy-aot', ['clean'], function () {
