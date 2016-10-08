@@ -9,5 +9,9 @@
     "removeComments": false,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
-  }
+  },
+  "exclude": [
+    "node_modules/*",
+    "app/*-aot.ts"
+  ]
 }

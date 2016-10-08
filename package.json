@@ -7,9 +7,9 @@
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
+    "typings": "typings",
     "aot": "ngc -p tsconfig-aot.json",
     "rollup": "rollup -c rollup-config.js",
-    "typings": "typings",
     "aot-run": "npm run aot && npm run rollup && npm run lite"
   },
   "dependencies": {
