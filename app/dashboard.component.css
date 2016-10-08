@@ -18,6 +18,7 @@ h3 {
 }
 .grid {
   margin: 0;
+  display: inline-block;
 }
 .col-1-4 {
   width: 25%;
@@ -50,7 +51,11 @@ h4 {
 @media (max-width: 600px) {
 	.module {
 	  font-size: 10px;
-	  max-height: 75px; }
+	  max-height: 75px;
+  }
+  .col-1-4 {
+    width: 50%;
+  }
 }
 @media (max-width: 1024px) {
 	.grid {
