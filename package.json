@@ -9,8 +9,7 @@
     "tsc:w": "tsc -w",
     "aot": "ngc -p tsconfig-aot.json",
     "rollup": "rollup -c rollup-config.js",
-    "typings": "typings",
-    "run-aot": "npm run aot && npm run rollup && gulp run-aot"
+    "typings": "typings"
   },
   "dependencies": {
     "@angular/common": "~2.0.2",
