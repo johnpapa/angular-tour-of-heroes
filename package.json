@@ -10,7 +10,7 @@
     "typings": "typings",
     "aot": "ngc -p tsconfig-aot.json",
     "rollup": "rollup -c rollup-config.js",
-    "start-aot": "npm run aot && npm run rollup && npm run lite"
+    "start-aot": "npm run aot && npm run rollup && gulp copy-aot && npm run lite"
   },
   "dependencies": {
     "@angular/common": "~2.0.2",
