@@ -22,7 +22,7 @@ npm start
 Runs the Angular AoT compiler, rollup, uglify for an optimized bundle, then launches the app
 
 ```
-npm run aot-start
+npm run start-aot
 ```
 
 ### AoT + gzip 
