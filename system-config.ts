@@ -42,5 +42,3 @@ System.config({
     // 'app/models': { main: 'index'},
   }
 });
-
-
