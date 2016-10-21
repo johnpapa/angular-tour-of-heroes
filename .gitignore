@@ -1,4 +1,3 @@
-typings
 system-config.js*
 app/**/*.js
 app/**/*.map
@@ -7,3 +6,4 @@ jspm_packages
 bower_components
 aot/*
 dist/*
+yarn.lock

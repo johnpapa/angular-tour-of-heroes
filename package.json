@@ -4,10 +4,8 @@
   "scripts": {
     "start": "gulp copy-jit && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
-    "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings",
     "aot": "ngc -p tsconfig-aot.json",
     "rollup": "rollup -c rollup-config.js",
     "start-aot": "npm run aot && npm run rollup && gulp copy-aot && npm run lite"
@@ -46,6 +44,9 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
     "typescript": "^2.0.3",
-    "typings": "^1.4.0"
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.45",
+    "@types/jasmine": "^2.5.35",
+    "@types/selenium-webdriver": "^2.53.32"
   }
 }
