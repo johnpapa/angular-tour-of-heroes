@@ -8,7 +8,9 @@
     "tsc:w": "tsc -w",
     "aot": "ngc -p tsconfig-aot.json",
     "rollup": "rollup -c rollup-config.js",
-    "start-aot": "npm run aot && npm run rollup && gulp copy-aot && npm run lite"
+    "start-aot": "npm run aot && npm run rollup && gulp copy-aot && npm run lite",
+    "docs": "node_modules/.bin/compodoc -p tsconfig.json -d docs",
+    "serve-docs": "node_modules/.bin/compodoc -s -d docs"
   },
   "dependencies": {
     "@angular/common": "~2.2.0",
@@ -30,6 +32,11 @@
     "zone.js": "^0.6.26"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "@types/jasmine": "^2.5.36",
+    "@types/node": "^6.0.46",
+    "@types/selenium-webdriver": "^2.53.33",
+    "compodoc": "0.0.15",
     "concurrently": "^3.1.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
@@ -43,10 +50,6 @@
     "rollup-plugin-commonjs": "^5.0.4",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
-    "typescript": "^2.0.3",
-    "@types/core-js": "^0.9.34",
-    "@types/node": "^6.0.46",
-    "@types/jasmine": "^2.5.36",
-    "@types/selenium-webdriver": "^2.53.33"
+    "typescript": "^2.0.3"
   }
 }
