@@ -25,6 +25,14 @@ Runs the Angular AoT compiler, rollup, uglify for an optimized bundle, then laun
 npm run start-aot
 ```
 
+### AoT-Bundled (with Shims)
+
+Runs Rollup-bundler which bundles minified-shims plus AoT
+
+```
+npm run start-aot-bundle
+```
+
 ### AoT + gzip 
 
 Runs AoT plus gzips and launches the app 
