@@ -1,4 +1,5 @@
 <h2>My Heroes</h2>
+
 <ul class="heroes">
   <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
     <span class="hero-element">
@@ -19,4 +20,25 @@
     {{selectedHero.name | uppercase}} is my hero
   </h2>
   <button (click)="gotoDetail()">View Details</button>
+</div>
+
+<div>
+  <style>
+    .hidden { visibility: hidden}
+  </style>
+  <h4>ngFor Features</h4>
+  <button (click)="showNgFor=!showNgFor">{{showNgFor ? 'Hide' : 'Show'}} ngFor Features</button>
+  <table [class.hidden]="!showNgFor">
+    <tbody>
+      <tr *ngFor="let hero of heroes; let ix = index; let c = count; let e = even; let o = odd; let f = first; let l = last">
+        <td>{{hero.name}}</td>
+        <td>{{ix}}</td>
+        <td>{{c}}</td>
+        <td>{{e}}</td>
+        <td>{{o}}</td>
+        <td>{{f}}</td>
+        <td>{{l}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

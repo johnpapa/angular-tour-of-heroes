@@ -15,6 +15,7 @@ export class HeroesComponent implements OnInit {
   selectedHero: Hero;
   addingHero = false;
   error: any;
+  showNgFor = false;
 
   constructor(
     private router: Router,
