@@ -1,5 +1,5 @@
 {
-  "name": "angular2-tour-of-heroes",
+  "name": "angular-tour-of-heroes",
   "version": "0.1.0",
   "scripts": {
     "start": "gulp copy-jit && concurrently \"npm run tsc:w\" \"npm run lite\" ",
