@@ -1,6 +1,6 @@
 # Getting Started
 
-Super simple Angular 2 app with 1 module and 2 routes 
+Super simple Angular app with 1 module and 2 routes 
 
 ## Get the Code
 ```
