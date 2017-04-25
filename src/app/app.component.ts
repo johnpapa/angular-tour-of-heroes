@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  moduleId: module.id,
-  selector: 'my-app',
+  selector: 'my-root',
   template: `
     <h1>{{title}}</h1>
     <div class="header-bar"></div>

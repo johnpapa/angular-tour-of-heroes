@@ -34,10 +34,10 @@ export class HeroService {
   }
 
   delete(hero: Hero): Promise<Response> {
-    let headers = new Headers();
+    const headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    let url = `${this.heroesUrl}/${hero.id}`;
+    const url = `${this.heroesUrl}/${hero.id}`;
 
     return this.http
       .delete(url, { headers: headers })
@@ -47,7 +47,7 @@ export class HeroService {
 
   // Add new Hero
   private post(hero: Hero): Promise<Hero> {
-    let headers = new Headers({
+    const headers = new Headers({
       'Content-Type': 'application/json'
     });
 
@@ -60,10 +60,10 @@ export class HeroService {
 
   // Update existing Hero
   private put(hero: Hero): Promise<Hero> {
-    let headers = new Headers();
+    const headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    let url = `${this.heroesUrl}/${hero.id}`;
+    const url = `${this.heroesUrl}/${hero.id}`;
 
     return this.http
       .put(url, JSON.stringify(hero), { headers: headers })
