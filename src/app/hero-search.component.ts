@@ -13,8 +13,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-  moduleId: module.id,
-  selector: 'hero-search',
+  selector: 'my-hero-search',
   templateUrl: './hero-search.component.html',
   styleUrls: ['./hero-search.component.css'],
   providers: [HeroSearchService]
@@ -49,7 +48,7 @@ export class HeroSearchComponent implements OnInit {
   }
 
   gotoDetail(hero: Hero): void {
-    let link = ['/detail', hero.id];
+    const link = ['/detail', hero.id];
     this.router.navigate(link);
   }
 }

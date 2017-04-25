@@ -5,7 +5,6 @@ import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
-  moduleId: module.id,
   selector: 'my-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.css']
@@ -24,7 +23,7 @@ export class HeroDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.forEach((params: Params) => {
       if (params['id'] !== undefined) {
-        let id = +params['id'];
+        const id = +params['id'];
         this.navigated = true;
         this.heroService.getHero(id)
             .then(hero => this.hero = hero);
