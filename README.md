@@ -1,6 +1,6 @@
 # Getting Started
 
-Super simple Angular app with 1 module and 2 routes 
+Super simple Angular app with 1 module and 2 routes. This is a mnor variation on the Tour of Heroes I wrote for the official docs.
 
 ## Get the Code
 ```
@@ -9,36 +9,30 @@ cd toh
 npm i
 ```
 
-### Just in Time (JiT) Compilation
+## Development server
 
-Runs the TypeScript compiler and launches the app
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-```
-npm start
-```
+## Code scaffolding
 
-### Ahead of Time (AoT) Compilation 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
-Runs the Angular AoT compiler, rollup, uglify for an optimized bundle, then launches the app
+## Build
 
-```
-npm run start-aot
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-### AoT + gzip 
+## Running unit tests
 
-Runs AoT plus gzips and launches the app 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```
-gulp copy-aot-gzip
-npm run aot
-npm run rollup
-http-server
-```
+## Running end-to-end tests
 
-Notes:
-- Use your favorite server in place of `http-server`
-- This could be scripted, obviously
-- `lite-server` does not launch gzipped files by default.
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
 
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
