@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http, Response } from '@angular/http';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Hero } from './hero';
@@ -9,14 +8,14 @@ import { Hero } from './hero';
 export class HeroService {
   private heroesUrl = 'app/heroes';  // URL to web api
 
-  constructor(private http: Http) { }
+  constructor(private client: HttpClient) { }
 
   getHeroes(): Promise<Array<Hero>> {
-    return this.http
-      .get(this.heroesUrl)
+    return this.client
+      .get<Hero[]>(this.heroesUrl)
       .toPromise()
       .then((response) => {
-        return response.json().data as Hero[];
+        return response as Hero[];
       })
       .catch(this.handleError);
   }
@@ -34,12 +33,12 @@ export class HeroService {
   }
 
   delete(hero: Hero): Promise<Response> {
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
+    const headers = new HttpHeaders()
+    .set('Content-Type','application/json');
 
     const url = `${this.heroesUrl}/${hero.id}`;
 
-    return this.http
+    return this.client
       .delete(url, { headers: headers })
       .toPromise()
       .catch(this.handleError);
@@ -47,25 +46,24 @@ export class HeroService {
 
   // Add new Hero
   private post(hero: Hero): Promise<Hero> {
-    const headers = new Headers({
-      'Content-Type': 'application/json'
-    });
+    const headers = new HttpHeaders()
+    .set('Content-Type','application/json');
 
-    return this.http
-      .post(this.heroesUrl, JSON.stringify(hero), { headers: headers })
+    return this.client
+      .post<any>(this.heroesUrl, JSON.stringify(hero), { headers: headers })
       .toPromise()
-      .then(res => res.json().data)
+      .then(res => res)
       .catch(this.handleError);
   }
 
   // Update existing Hero
   private put(hero: Hero): Promise<Hero> {
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
+    const headers = new HttpHeaders()
+    .set('Content-Type','application/json');
 
     const url = `${this.heroesUrl}/${hero.id}`;
 
-    return this.http
+    return this.client
       .put(url, JSON.stringify(hero), { headers: headers })
       .toPromise()
       .then(() => hero)
