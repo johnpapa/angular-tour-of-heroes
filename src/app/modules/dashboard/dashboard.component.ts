@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import {  HeroService } from '../hero/index';
+import { Hero } from '../../viewmodels/hero/hero.model';
 
 @Component({
   selector: 'my-dashboard',

@@ -8,11 +8,11 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HeroService } from './hero.service';
-import { DashboardComponent } from './dashboard.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroSearchComponent } from './hero-search.component';
+
+import { DashboardComponent } from './modules/dashboard/index';
+
+import { HeroService, HeroDetailComponent,
+   HeroSearchComponent, HeroesListComponent } from './modules/hero/index';
 
 @NgModule({
   imports: [
@@ -26,7 +26,7 @@ import { HeroSearchComponent } from './hero-search.component';
     AppComponent,
     DashboardComponent,
     HeroSearchComponent,
-    HeroesComponent,
+    HeroesListComponent,
     HeroDetailComponent,
   ],
   providers: [HeroService],
