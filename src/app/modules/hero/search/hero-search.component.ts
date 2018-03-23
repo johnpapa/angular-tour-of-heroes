@@ -4,13 +4,14 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 
 import { HeroSearchService } from './hero-search.service';
-import { Hero } from './hero';
+
 
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
+import { Hero } from '../../../viewmodels/hero/hero.model';
 
 @Component({
   selector: 'my-hero-search',
