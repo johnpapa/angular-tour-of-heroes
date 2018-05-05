@@ -1,7 +1,8 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError as observableThrowError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+
 import { Hero } from './hero';
 
 @Injectable()
@@ -61,6 +62,6 @@ export class HeroService {
 
   private handleError(res: HttpErrorResponse | any) {
     console.error(res.error || res.body.error);
-    return Observable.throw(res.error || 'Server error');
+    return observableThrowError(res.error || 'Server error');
   }
 }
