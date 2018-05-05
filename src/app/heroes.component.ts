@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
@@ -16,15 +15,15 @@ export class HeroesComponent implements OnInit {
   error: any;
   showNgFor = false;
 
-  constructor(
-    private router: Router,
-    private heroService: HeroService) { }
+  constructor(private router: Router, private heroService: HeroService) {}
 
   getHeroes(): void {
     this.heroService
       .getHeroes()
-      .then(heroes => this.heroes = heroes)
-      .catch(error => this.error = error);
+      .subscribe(
+        heroes => (this.heroes = heroes),
+        error => (this.error = error)
+      )
   }
 
   addHero(): void {
@@ -34,18 +33,19 @@ export class HeroesComponent implements OnInit {
 
   close(savedHero: Hero): void {
     this.addingHero = false;
-    if (savedHero) { this.getHeroes(); }
+    if (savedHero) {
+      this.getHeroes();
+    }
   }
 
   deleteHero(hero: Hero, event: any): void {
     event.stopPropagation();
-    this.heroService
-      .delete(hero)
-      .then(res => {
-        this.heroes = this.heroes.filter(h => h !== hero);
-        if (this.selectedHero === hero) { this.selectedHero = null; }
-      })
-      .catch(error => this.error = error);
+    this.heroService.delete(hero).subscribe(res => {
+      this.heroes = this.heroes.filter(h => h !== hero);
+      if (this.selectedHero === hero) {
+        this.selectedHero = null;
+      }
+    }, error => (this.error = error));
   }
 
   ngOnInit(): void {
