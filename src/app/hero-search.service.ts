@@ -1,24 +1,21 @@
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
-
+import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Hero } from './hero';
 
 @Injectable()
 export class HeroSearchService {
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) {}
 
   search(term: string): Observable<Hero[]> {
     return this.http
-      .get(`app/heroes/?name=${term}`)
-      .map((r: Response) => r.json().data as Hero[])
-      .catch((error: any) => {
-          console.error('An friendly error occurred', error);
-          return Observable.throw(error.message || error);
-      });
+      .get<Hero[]>(`app/heroes/?name=${term}`)
+      .pipe(catchError(this.handleError));
+  }
+
+  private handleError(res: HttpErrorResponse) {
+    console.error(res.error);
+    return Observable.throw(res.error || 'Server error');
   }
 }
