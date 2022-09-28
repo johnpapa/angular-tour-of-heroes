@@ -121,7 +121,6 @@
       }
     }
   },
-  "defaultProject": "tour-of-heroes",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "my",
@@ -130,5 +129,8 @@
     "@schematics/angular:directive": {
       "prefix": "my"
     }
+  },
+  "cli": {
+    "analytics": "442ee7f3-65af-413d-9e58-e811979326f4"
   }
 }
