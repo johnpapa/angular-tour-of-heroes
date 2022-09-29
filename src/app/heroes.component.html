@@ -12,7 +12,10 @@
 <div class="error" *ngIf="error">{{error}}</div>
 <button (click)="addHero()">Add New Hero</button>
 <div *ngIf="addingHero">
-  <my-hero-detail (close)="close($event)"></my-hero-detail>
+  <my-hero-detail
+    [hero]="newHero"
+    (close)="close($event)"
+  ></my-hero-detail>
 </div>
 
 <div *ngIf="selectedHero">

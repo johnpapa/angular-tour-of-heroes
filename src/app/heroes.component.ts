@@ -14,6 +14,7 @@ export class HeroesComponent implements OnInit {
   addingHero = false;
   error: any;
   showNgFor = false;
+  newHero: Hero;
 
   constructor(private router: Router, private heroService: HeroService) {}
 
@@ -27,6 +28,7 @@ export class HeroesComponent implements OnInit {
   }
 
   addHero(): void {
+    this.newHero = new Hero();
     this.addingHero = true;
     this.selectedHero = null;
   }

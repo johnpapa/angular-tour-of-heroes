@@ -1,0 +1,5 @@
+<my-hero-detail
+  [hero]="'id' | activatedRouteParam: { type: 'number' } | async | hero | async"
+  (close)="goBack()"
+>
+</my-hero-detail>
