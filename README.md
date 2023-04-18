@@ -4,16 +4,40 @@ Super simple Angular app with 1 module and 2 routes. Minor variation of the Tour
 
 I use this app in my Beginner UI Workshop to help people get more comfortable doing UI in Angular and to show off Kendo UI (the component library). See the workshop details below.
 
-## Get the Code
+## Install Instructions
+[This repo](https://github.com/alyssamichelle/angular-tour-of-heroes) is commonly used by Alyssa Nicoll for her beginner UI workshops. It is an updated fork of John Papa's original tour of heroes, which can be found throughout the Angular docs and is a wonderful learning resource. This file should have all the instructions you need to get started.  There will be prizes for best use of a Kendo UI Component and other categories, so make sure you have the repo installed and running!
+
+- Host BIO: Alyssa is an Angular Developer Advocate for KUI and a Google Developer Expert for Angular. Her two degrees (Web Design & Development and Psychology) feed her speaking career. She has spoken at over 30 conferences Internationally. She streams weekly on the Angular Air podcast and Twitch CodeItLive channel. She enjoys gaming, scuba diving, and has a little one that fondly goes by "Mr. Milks".
+- Host Headshot: https://cl.nicoll.co/eDujOn8D
+- Host Twitter: [@AlyssaNicoll](https://twitter.com/AlyssaNicoll)
+
+### Get the Code
+Clone down repo with HTTPS (easier for beginners)
 ```
-git clone https://github.com/alyssamichelle/angular-tour-of-heroes.git toh
-cd toh
-npm i
+git clone https://github.com/alyssamichelle/angular-tour-of-heroes.git
+```
+-or- you can clone down with SSH if you are set up for that:
+```
+git clone git@github.com:alyssamichelle/angular-tour-of-heroes.git
 ```
 
-## Development server
+### Move into that directory:
+```
+cd angular-tour-of-heroes 
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Install the glorious dependencies
+```
+npm install
+```
+
+### Serve up your app locally with the CLI:
+
+```
+ng serve
+```
+
+This runs a local development server at port `http://localhost:4200/`. The app will automatically reload if you change any of the source files. Go ahead and pull this up in your favorite browser!
 
 ## Code scaffolding
 
@@ -48,13 +72,3 @@ A workshop for UI and Angular beginners alike. Let's pull down the Tour of Heroe
 - Play around with customizing styles and writing custom CSS from scratch.
 - Go over UI/UX principles and implement them on the fly.
 - Take part in UI challenges throughout the Workshop and win prizes!
-
- 
-### Install Instructions
- 
-Feel free to clone down my version of The Tour of Heroes: [this repo](https://github.com/alyssamichelle/angular-tour-of-heroes)  It can be found throughout the Angular docs and is a wonderful learning resource. The README has all the instructions you should need. This is my forked version that has the latest Angular version. There will be prizes for best use of a Kendo UI Component and other categories, so make sure you have the repo installed and running!
-
-- Host BIO: Alyssa is an Angular Developer Advocate for KUI and a Google Developer Expert for Angular. Her two degrees (Web Design & Development and Psychology) feed her speaking career. She has spoken at over 30 conferences Internationally. She streams weekly on the Angular Air podcast and Twitch CodeItLive channel. She enjoys gaming, scuba diving, and has a little one that fondly goes by "Mr. Milks".
-- Host Headshot: https://cl.nicoll.co/eDujOn8D
-- Host Twitter: [@AlyssaNicoll](https://twitter.com/AlyssaNicoll)
-
