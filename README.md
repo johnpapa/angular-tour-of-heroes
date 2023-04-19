@@ -28,9 +28,13 @@ cd angular-tour-of-heroes
 
 ### Install the glorious dependencies
 ```
-npm install --force
+npm install
 ```
-* We need to use the force right now because I have dependency issues I haven't resolved yet.
+* Note, sometimes you might need to use --force when installing. If you run into dependency issues while install, try deleting your package-lock and node_modules before re-trying the install:
+
+```
+rm -rf node_modules package-lock.json
+```
 
 ### Serve up your app locally with the CLI:
 
