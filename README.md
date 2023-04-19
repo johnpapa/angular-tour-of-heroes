@@ -28,8 +28,9 @@ cd angular-tour-of-heroes
 
 ### Install the glorious dependencies
 ```
-npm install
+npm install --force
 ```
+* We need to use the force right now because I have dependency issues I haven't resolved yet.
 
 ### Serve up your app locally with the CLI:
 
