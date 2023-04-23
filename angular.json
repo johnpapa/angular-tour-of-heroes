@@ -23,14 +23,20 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "aot": false,
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -62,25 +68,8 @@
             "browserTarget": "tour-of-heroes:build"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "karmaConfig": "./karma.conf.js",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [],
-            "styles": [
-              "src/styles.css"
-            ],
-            "assets": [
-              "src/assets",
-              "src/favicon.ico"
-            ]
-          }
-        },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-devkit/build-angular:eslint",
           "options": {
             "tsConfig": [
               "src/tsconfig.app.json",
@@ -90,39 +79,18 @@
           }
         }
       }
-    },
-    "tour-of-heroes-e2e": {
-      "root": "",
-      "sourceRoot": "",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "tour-of-heroes:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
-            ],
-            "exclude": []
-          }
-        }
-      }
     }
   },
-  "defaultProject": "tour-of-heroes",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "my",
-      "styleext": "css"
+      "style": "css"
     },
     "@schematics/angular:directive": {
       "prefix": "my"
     }
+  },
+  "cli": {
+    "analytics": "442ee7f3-65af-413d-9e58-e811979326f4"
   }
 }
